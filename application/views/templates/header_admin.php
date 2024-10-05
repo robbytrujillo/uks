@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>UKS</title>
+  <title>UKS IHBS</title> 
 
   <!-- General CSS Files -->
-  <link rel="shortcut icon" href="<?= base_url() ?>/image/1.png">
+  <link rel="shortcut icon" href="<?= base_url() ?>/image/ihbs-logo-2.png">
   <link rel="stylesheet" href="<?= base_url() ?>/dist/modules/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/dist/modules/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="<?= base_url() ?>/dist/modules/ionicons/css/ionicons.min.css">
@@ -26,7 +26,7 @@
     <div class="main-wrapper container">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
-        <a href="<?= base_url('admin/')?>" class="navbar-brand sidebar-gone-hide" style="font-size: 20px;"><img src="<?= base_url()?>/image/1.png" width="4.5%">UKS SEKOLAH</a>
+        <a href="<?= base_url('admin/')?>" class="navbar-brand sidebar-gone-hide" style="font-size: 20px;"><img src="<?= base_url()?>/image/ihbs-logo-2.png" width="4.5%">UKS IHBS</a>
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
         <div class="nav-collapse">
           <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">

@@ -10,7 +10,7 @@
 	<div class="text-center">
 		<div class="title text-center">
 			<br>
-			<h1 align="center" style="color: black;"><img src="../../image/1.png" style="height: 50px; padding-bottom: 10px;"> UKS SEKOLAH </h1>
+			<h1 align="center" style="color: black;"><img src="../../image/1.png" style="height: 50px; padding-bottom: 10px;"> UKS IHBS </h1>
 			<p align="center" style="color: black;"> Jl. Raya xxx, xxxx, xxxx, xxxx., Kxxxx, xxxxx 1xxxx</p>
 			<hr>
 		</div>
