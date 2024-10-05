@@ -1,0 +1,167 @@
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Admin extends CI_Controller {
+	
+	public function __construct(){
+		parent::__construct();
+		$this->load->library('form_validation');
+
+		if($this->session->userdata('status') != 'login') {
+			redirect(base_url());
+		}
+	}
+
+	public function index()
+	{
+		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `rombel`, `rayon`, `tgl_sakit`, `keterangan` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
+			')->result();
+         
+		
+		$this->load->view('templates/header_admin');
+		$this->load->view('admin/admin', $data);
+		$this->load->view('templates/footer_admin');
+		
+	}
+
+	public function siswa(){
+		$this->db->order_by('tgl_sakit' , 'DESC');
+		$data['sakit'] = $this->db->get('tb_sakit')->result();
+
+		$this->load->view('templates/header_admin');
+		$this->load->view('admin/content/input_sakit' , $data);
+		$this->load->view('templates/footer_admin');
+	}
+
+	public function cari(){
+		$nis = $this->input->post('nis');
+
+		$data['siswa'] = $this->db->get_where('tb_siswa' , ['nis' => $nis])->result();
+		$nis = $this->db->get_where('tb_siswa' , ['nis' => $nis])->row_array();
+
+		if ($nis == null) {
+			$this->session->set_flashdata('cari', 'Siswa dengan nis tersebut tidak ada !!!');
+			redirect(base_url('admin/siswa'));
+		}else{
+			$this->load->view('templates/header_admin');
+			$this->load->view('admin/content/data_siswa' , $data);
+			$this->load->view('templates/footer_admin');
+		}
+	}
+
+	public function add($nis){
+		$get = $this->db->get_where('tb_siswa' , ['nis' => $nis])->row_array();
+		$uwa = $get['nis'];
+		$data = [
+			'nis' => $uwa,
+			'nama' => $get['nama'],
+			'rombel' => $get['rombel'],
+			'rayon' => $get['rayon'],
+			'tgl_sakit' => date('Y-m-d'),
+			'keterangan' => $this->input->post('ket')
+		];
+
+		$this->db->insert('tb_sakit' , $data);
+
+		redirect(base_url('admin/siswa'));
+	}
+
+	public function delete($id){
+		$where = ['id_sakit' => $id];
+		$this->db->where($where);
+		$this->db->delete('tb_sakit');
+		$this->session->set_flashdata('flash', 'Dihapus');
+
+		redirect(base_url('admin/siswa'));
+	}
+
+	public function edit($id){
+		$data['sakit'] = $this->db->get_where('tb_sakit' , ['id_sakit' => $id])->result();
+
+		$this->load->view('templates/header_admin');
+		$this->load->view('admin/content/edit_siswa' , $data);
+		$this->load->view('templates/footer_admin');
+
+	}
+
+	public function update($id){
+		$get = $this->db->get_where('tb_sakit' , ['id_sakit' => $id])->row_array();
+		$uwa = $get['nis'];
+		$data = [
+			'nis' => $uwa,
+			'keterangan' => $this->input->post('ket')
+		];
+
+		$where = array('id_sakit' => $id);
+		$this->db->where($where);
+		$this->db->update('tb_sakit' , $data);
+
+
+		redirect(base_url('admin/siswa'));
+	}
+
+	public function report(){
+		$report['data'] = $this->db->get('tb_sakit')->result();
+
+		$this->load->view('templates/header_admin');
+		$this->load->view('admin/content/report' , $report);
+		$this->load->view('templates/footer_admin');
+	}
+
+	public function laporan($date){
+		$date = date('Y-m-d');
+		$where = array('tgl_sakit' => $date);
+		$laporan['data'] = $this->db->get_where('tb_sakit' , ['tgl_sakit' => $date])->result();
+
+		$this->load->view('templates/header_laporan');
+		$this->load->view('admin/content/laporan' , $laporan);
+		$this->load->view('templates/footer_admin');
+	}
+
+	public function laporanbulanan(){
+		$bulan = $this->input->post('bulan');
+
+		$this->db->select('*');
+		$this->db->from('tb_sakit');
+		$this->db->where('MONTH(tgl_sakit)' , $bulan);
+		$laporan['data'] = $this->db->get()->result();
+
+		if ($bulan == null) {
+			redirect(base_url('admin/report'));
+		}else{
+			if ($bulan == '01') {
+			$laporan['bulan'] = 'Januari';
+			}elseif ($bulan == '02') {
+				$laporan['bulan'] = 'Februari';
+			}elseif ($bulan == '03') {
+				$laporan['bulan'] = 'Maret';
+			}elseif ($bulan == '04') {
+				$laporan['bulan'] = 'April';
+			}elseif ($bulan == '05') {
+				$laporan['bulan'] = 'Mei';
+			}elseif ($bulan == '06') {
+				$laporan['bulan'] = 'Juni';
+			}elseif ($bulan == '07') {
+				$laporan['bulan'] = 'Juli';
+			}elseif ($bulan == '08') {
+				$laporan['bulan'] = 'Agustus';
+			}elseif ($bulan == '09') {
+				$laporan['bulan'] = 'September';
+			}elseif ($bulan == '10') {
+				$laporan['bulan'] = 'Oktober';
+			}elseif ($bulan == '11') {
+				$laporan['bulan'] = 'November';
+			}elseif ($bulan == '12') {
+				$laporan['bulan'] = 'Desember';
+			}
+
+			$this->load->view('templates/header_laporan');
+			$this->load->view('admin/content/laporanbulanan' , $laporan);
+			$this->load->view('templates/footer_admin');
+		}
+		
+	}
+
+}
+
+?>
