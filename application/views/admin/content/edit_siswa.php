@@ -20,11 +20,11 @@
 									<input type="text" name="nama" disabled class="form-control text-dark" value="<?= $data->nama  ?>">
 								</div>
 								<div class="form-group">
-									<label>Rombel</label>
+									<label>Rombel Kelas</label>
 									<input type="text" name="rombel" disabled  class="form-control text-dark" value="<?= $data->rombel  ?>">
 								</div>
 								<div class="form-group">
-									<label>Rayon</label>
+									<label>Asal</label>
 									<input type="text" name="rayon" disabled  class="form-control text-dark" value="<?= $data->rayon  ?>">
 								</div>
 								<div class="form-group">

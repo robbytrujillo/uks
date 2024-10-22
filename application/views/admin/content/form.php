@@ -64,7 +64,7 @@
 			<th colspan='6'>Preview Data</th>
 		</tr>
 		<tr>
-			<th>NIS</th>
+			<th>NISN</th>
 			<th>Nama</th>
 			<th width='15px'>Jenis Kelamin</th>
 			<th>Rayon</th>

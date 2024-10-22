@@ -19,10 +19,10 @@
                       <thead>
                         <tr>
                           <th scope="col">No.</th>
-                          <th scope="col">NIS</th>
+                          <th scope="col">NISN</th>
                           <th scope="col">Nama</th>
-                          <th scope="col">Rombel</th>
-                          <th scope="col">Rayon</th>
+                          <th scope="col">Rombel Kelas</th>
+                          <th scope="col">Asal</th>
                           <th>Jumlah Sakit</th>
                         </tr>
                       </thead>

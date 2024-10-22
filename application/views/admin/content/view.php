@@ -15,12 +15,12 @@
 	<table id="table-1" class="table table-striped table-hovered table-bordered">
 	<thead>	
 			<tr>
-				<th>NIS</th>
+				<th>NISN</th>
 				<th>Nama</th>
 				<th>Jenis Kelamin</th>
-				<th>Rayon</th>
-				<th>Rombel</th>
-				<th>Kelas</th>
+				<th>Asal</th>
+				<th>Rombel Kelas</th>
+				<th>Tingkat Kelas</th>
 			</tr>
 	</thead>
 	<tbody>	

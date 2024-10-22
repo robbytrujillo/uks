@@ -15,10 +15,10 @@
 								<thead>
 									<tr>
 										<th>Tanggal</th>
-										<th>NIS</th>
+										<th>NISN</th>
 										<th>Nama</th>
-										<th>Rombel</th>
-										<th>Rayon</th>
+										<th>Rombel Kelas</th>
+										<th>Asal</th>
 										<th>Keterangan Sakit</th>
 									</tr>
 								</thead>

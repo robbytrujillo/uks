@@ -30,10 +30,10 @@
 						<div class="card-body">
 							<form action="<?= base_url('admin/cari') ?>" method="post">
 							<div class="form-group">
-							<label>NIS</label>
+							<label>NISN</label>
 							<div class="row">
 								<div class="col-8">
-									<input type="number" name="nis" class="form-control" placeholder="Nis. ex 1160****" maxlength="8" style="float: left;" required="" autofocus="">
+									<input type="number" name="nis" class="form-control" placeholder="Nisn. ex 1160****" maxlength="8" style="float: left;" required="" autofocus="">
 								</div>
 								<div class="col-4">	
 									<button class="form-control btn btn-info"><i class="fa fa-search"></i></button>
@@ -54,10 +54,10 @@
 									<thead>
 										<tr>
 											<th>No.</th>
-											<th>NIS</th>
+											<th>NISN</th>
 											<th>Nama</th>
-											<th>Rombel</th>
-											<th>Rayon</th>
+											<th>Rombel Kelas</th>
+											<th>Asal</th>
 											<th>Tanggal</th>
 											<th>Keterangan Sakit</th>
 											<th width="13%">Aksi</th>

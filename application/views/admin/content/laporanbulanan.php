@@ -8,8 +8,8 @@
 	</style>
 	<div class="text-center">
 		<br>
-			<h1 align="center" style="color: black;"><img src="../image/1.png" style="height: 50px; padding-bottom: 10px;"> UKS UKS SEKOLAH</h1>
-			<p align="center" style="color: black;"> Jl. Raya xxx, xxxx, xxxx, xxxx., Kxxxx, xxxxx 1xxxx</p>
+			<h1 align="center" style="color: black;"><img src="../image/ihbs-logo-2.png" style="height: 50px; padding-bottom: 10px;"><span style="color: #467228">UKS SMA</span></h1>
+			<p align="center" style="color: black;"> Jl. Bungur 2 Harjamukti Cimanggis Depok Jawa Barat</p>
 			<hr>
 			<br>
 		<h5>Laporan Sakit Bulan <?= $bulan?></h5>
@@ -19,10 +19,10 @@
 				<tr>
 					<th>No.</th>
 					<th>Tanggal</th>
-					<th>NIS</th>
+					<th>NISN</th>
 					<th>Nama</th>
-					<th>Rombel</th>
-					<th>Rayon</th>
+					<th>Rombel Kelas</th>
+					<th>Asal</th>
 					<th>Keterangan Sakit</th>
 				</tr>
 			</thead>
