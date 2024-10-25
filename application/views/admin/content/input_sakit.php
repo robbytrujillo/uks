@@ -56,7 +56,7 @@
 											<th>No.</th>
 											<th>NISN</th>
 											<th>Nama</th>
-											<th>Rombel Kelas</th>
+											<th>Kelas</th>
 											<th>Asal</th>
 											<th>Tanggal</th>
 											<th>TD</th>
@@ -64,7 +64,7 @@
 											<th>Keluhan</th>
 											<th>Diagnosa</th>
 											<th>Penanganan</th>
-											<th width="13%">Aksi</th>
+											<th width="15%" style="">Pengaturan Aksi</th>
 										</tr>
 									</thead>
 									<tbody>

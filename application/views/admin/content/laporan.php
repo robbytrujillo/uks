@@ -25,7 +25,8 @@
 					<th>Nama</th>
 					<th>Rombel Kelas</th>
 					<th>Asal</th>
-					<th>Keterangan Sakit</th>
+					<th>Diagnosa</th>
+					<th>Penanganan</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -36,7 +37,8 @@
 						<td><?= $value->nama ?></td>
 						<td><?= $value->rombel ?></td>
 						<td><?= $value->rayon ?></td>
-						<td><?= $value->keterangan ?></td>
+						<td><?= $value->diagnosa ?></td>
+						<td><?= $value->penanganan ?></td>
 					</tr>
 				<?php } ?>
 				
