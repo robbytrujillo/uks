@@ -14,7 +14,7 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `rombel`, `rayon`, `tgl_sakit`, `keterangan` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
+		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `rombel`, `rayon`, `tgl_sakit`, `diagnosa` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
 			')->result();
          
 		
@@ -58,7 +58,11 @@ class Admin extends CI_Controller {
 			'rombel' => $get['rombel'],
 			'rayon' => $get['rayon'],
 			'tgl_sakit' => date('Y-m-d'),
-			'keterangan' => $this->input->post('ket')
+			'tekanan_darah' => $get['tekanan_darah'],
+			'suhu' => $get['suhu'],
+			'keluhan' => $get['keluhan'],
+			'diagnosa' => $this->input->post('diagnosa'),
+			'penanganan' => $get['penanganan'],
 		];
 
 		$this->db->insert('tb_sakit' , $data);

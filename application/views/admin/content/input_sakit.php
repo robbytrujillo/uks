@@ -59,7 +59,11 @@
 											<th>Rombel Kelas</th>
 											<th>Asal</th>
 											<th>Tanggal</th>
-											<th>Keterangan Sakit</th>
+											<th>TD</th>
+											<th>Suhu</th>
+											<th>Keluhan</th>
+											<th>Diagnosa</th>
+											<th>Penanganan</th>
 											<th width="13%">Aksi</th>
 										</tr>
 									</thead>
@@ -74,7 +78,11 @@
 											<td><?= $sakut->rombel ?></td>
 											<td><?= $sakut->rayon ?></td>
 											<td><?= $sakut->tgl_sakit  ?></td>
-											<td><?= $sakut->keterangan ?></td>
+											<th><?= $sakut->tekanan_darah ?></th>
+											<th><?= $sakut->suhu ?></th>
+											<th><?= $sakut->keluhan ?></th>
+											<th><?= $sakut->diagnosa ?></th>
+											<td><?= $sakut->penanganan ?></td>
 											<td>
 												<?= anchor(base_url('admin/edit/') . $sakut->id_sakit, '<button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>') ?>
 												<a onclick="return confirm('Apakah Kamu Yakin ?')" href="<?= site_url('admin/delete/'.$sakut->id_sakit)?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>

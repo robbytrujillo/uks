@@ -28,8 +28,8 @@
 									<input type="text" name="rayon" disabled  class="form-control text-dark" value="<?= $data->rayon  ?>">
 								</div>
 								<div class="form-group">
-									<label>Keterangan Sakit</label>
-									<textarea class="form-control" name="ket" rows="2"  autofocus ><?= $data->keterangan ?></textarea>
+									<label>Diagnosat</label>
+									<textarea class="form-control" name="diagnosa" rows="2"  autofocus ><?= $data->diagnosa ?></textarea>
 								</div>
 								<div class="row">
 									<div class="col-6">	
