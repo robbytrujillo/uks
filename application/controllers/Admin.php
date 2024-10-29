@@ -14,14 +14,13 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `rombel`, `rayon`, `tgl_sakit`, `diagnosa` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
+		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `rombel`, `rayon`, `tgl_sakit`, `tekanan_darah`, `suhu`, `keluhan`, `diagnosa`, `penanganan` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
 			')->result();
          
 		
 		$this->load->view('templates/header_admin');
 		$this->load->view('admin/admin', $data);
 		$this->load->view('templates/footer_admin');
-		
 	}
 
 	public function siswa(){
@@ -58,11 +57,11 @@ class Admin extends CI_Controller {
 			'rombel' => $get['rombel'],
 			'rayon' => $get['rayon'],
 			'tgl_sakit' => date('Y-m-d'),
-			'tekanan_darah' => $get['tekanan_darah'],
-			'suhu' => $get['suhu'],
-			'keluhan' => $get['keluhan'],
+			'tekanan_darah' => $this->input->post('tekanan_darah'),
+			'suhu' => $this->input->post('suhu'),
+			'keluhan' => $this->input->post('keluhan'),
 			'diagnosa' => $this->input->post('diagnosa'),
-			'penanganan' => $get['penanganan'],
+			'penanganan' =>$this->input->post('penanganan'),
 		];
 
 		$this->db->insert('tb_sakit' , $data);
@@ -93,8 +92,14 @@ class Admin extends CI_Controller {
 		$uwa = $get['nis'];
 		$data = [
 			'nis' => $uwa,
-			'keterangan' => $this->input->post('ket')
+			'tgl_sakit' => $this->input->post('tgl_sakit'),
+			'tekanan_darah' => $this->input->post('tekanan_darah'),
+			'suhu' => $this->input->post('suhu'),
+			'keluhan' => $this->input->post('keluhan'),
+			'diagnosa' => $this->input->post('diagnosa'),
+			'penanganan' => $this->input->post('penanganan')
 		];
+		
 
 		$where = array('id_sakit' => $id);
 		$this->db->where($where);

@@ -28,8 +28,28 @@
 									<input type="text" name="rayon" disabled  class="form-control text-dark" value="<?= $data->rayon  ?>">
 								</div>
 								<div class="form-group">
+									<label>Tanggal</label>
+									<input type="date" class="form-control" name="tgl_sakit" autofocus required></input>
+								</div>
+								<div class="form-group">
+									<label>Tekanan Darah</label>
+									<input type="text" class="form-control" name="tekanan_darah" ></input>
+								</div>
+								<div class="form-group">
+									<label>Suhu</label>
+									<input type="text" class="form-control" name="suhu" ></input>
+								</div>
+								<div class="form-group">
+									<label>Keluhan</label>
+									<textarea class="form-control" name="keluhan" rows="2"></textarea>
+								</div>
+								<div class="form-group">
 									<label>Diagnosa</label>
-									<textarea class="form-control" name="diagnosa" rows="2" autofocus required></textarea>
+									<textarea class="form-control" name="diagnosa" rows="2"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Penanganan</label>
+									<textarea class="form-control" name="penanganan" rows="2"></textarea>
 								</div>
 								<div class="form-group">	
 									<button class="form-control btn btn-primary">Simpan</button>

@@ -28,8 +28,28 @@
 									<input type="text" name="rayon" disabled  class="form-control text-dark" value="<?= $data->rayon  ?>">
 								</div>
 								<div class="form-group">
-									<label>Diagnosat</label>
+									<label>Tanggal</label>
+									<input type="date" name="tgl_sakit" class="form-control text-dark" value="<?= $data->tgl_sakit  ?>">
+								</div>
+								<div class="form-group">
+									<label>Tekanan Darah</label>
+									<input type="text" name="tekanan_darah" class="form-control text-dark" value="<?= $data->tekanan_darah  ?>">
+								</div>
+								<div class="form-group">
+									<label>Suhu</label>
+									<input type="text" name="suhu" class="form-control text-dark" value="<?= $data->suhu  ?>">
+								</div>
+								<div class="form-group">
+									<label>Keluhan</label>
+									<textarea class="form-control" name="keluhan" rows="2"  autofocus ><?= $data->keluhan ?></textarea>
+								</div>
+								<div class="form-group">
+									<label>Diagnosa</label>
 									<textarea class="form-control" name="diagnosa" rows="2"  autofocus ><?= $data->diagnosa ?></textarea>
+								</div>
+								<div class="form-group">
+									<label>Penanganan</label>
+									<textarea class="form-control" name="penanganan" rows="2"  autofocus ><?= $data->penanganan ?></textarea>
 								</div>
 								<div class="row">
 									<div class="col-6">	
