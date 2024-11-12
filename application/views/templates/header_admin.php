@@ -25,7 +25,8 @@
   <div id="app">
     <div class="main-wrapper container">
       <div class="navbar-bg"></div>
-      <nav class="navbar navbar-expand-lg main-navbar">
+      <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+        <div class="container">
         <a href="<?= base_url('admin/')?>" class="navbar-brand sidebar-gone-hide" style="font-size: 20px;"><img src="<?= base_url()?>/image/ihbs-logo-2.png" width="3.5%">uks</a>
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
         <div class="nav-collapse">
@@ -49,8 +50,8 @@
             </div>
           </li>
         </ul>
+      </div>
       </nav>
-
       <nav class="navbar navbar-secondary navbar-expand-lg">
         <div class="container">
           <ul class="navbar-nav">
@@ -65,7 +66,6 @@
             </li>
             <li class="nav-item">
               <a href="<?= base_url('admin/report') ?>" class="nav-link"><i class="far ion-clipboard"></i><span>Laporan</span></a>
-              
             </li>
           </ul>
         </div>
