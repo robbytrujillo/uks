@@ -27,7 +27,7 @@
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
         <div class="container">
-        <a href="<?= base_url('admin/')?>" class="navbar-brand sidebar-gone-hide" style="font-size: 20px;"><img src="<?= base_url()?>/image/ihbs-logo-2.png" width="3.5%">uks</a>
+        <a href="<?= base_url('admin/')?>" class="navbar-brand sidebar-gone-hide" style="font-size: 20px;"><img src="<?= base_url()?>/image/ihbs-logo-2.png" width="3.8%">uks</a>
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
         <div class="nav-collapse">
           <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">

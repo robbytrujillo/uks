@@ -48,6 +48,8 @@
 									<textarea class="form-control" name="diagnosa" rows="2"></textarea>
 								</div>
 								<div class="form-group">
+
+								
 									<label>Penanganan</label>
 									<textarea class="form-control" name="penanganan" rows="2"></textarea>
 								</div>
