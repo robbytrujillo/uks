@@ -1,5 +1,367 @@
-NIS,Nama,Jenis Kelamin,Rayon,Rombel ,Kelas
-20240002,Osama,L,Padang,X-4 IPS,X
-20240003,Laden,L,Baghdad,X-2 IPA,X
-20240004,Hamid,L,Bengkulu,X-1 Diniyyah,X
-20240005,Jay,L,Serang,X-2 IPA,X
+nis,nama,jk,alamat,kelas,angkatan
+3084546946,Abdullah Azmi Fakhru Alhuda,L,belum terisi,X-1,belum terisi
+0087510588,Abdurrahman Al Harits,L,belum terisi,X-1,belum terisi
+0093511471,Alif Razan Pambudi,L,belum terisi,X-4,belum terisi
+0088637041,Ananda Rizqi Rochadi,L,belum terisi,X-1,belum terisi
+3081340862,Azfar Nabil Muzaffar,L,belum terisi,X-1,belum terisi
+0095925644,Dimas Ghani Putraiman,L,belum terisi,X-1,belum terisi
+0094227032,El Benzema Purnomo,L,belum terisi,X-1,belum terisi
+0097927089,Kautsar Muhammad Yususf,L,belum terisi,X-1,belum terisi
+0089682141,Kenzie Favian Divandi,L,belum terisi,X-1,belum terisi
+0094671744,Mhd Bariq Athallah,L,belum terisi,X-1,belum terisi
+0091751498,Misbah Tsaqifuddin,L,belum terisi,X-1,belum terisi
+0095799913,Muhammad Akhtar Ibra Hidayat,L,belum terisi,X-1,belum terisi
+0092226768,Muhammad Daffa Fadilah,L,belum terisi,X-1,belum terisi
+0089103852,Muhammad Faishal Fathurrahman,L,belum terisi,X-1,belum terisi
+0096087709,Muhammad Hazim Dwibagas,L,belum terisi,X-1,belum terisi
+0081972399,Muhammad Juan Viery Ardaris,L,belum terisi,X-1,belum terisi
+0091583691,Muhammad Raditya Azzam,L,belum terisi,X-1,belum terisi
+0095680131,Muhammad Zhafif Alvaro Arnold,L,belum terisi,X-1,belum terisi
+0095454429,Pandega Akram Widhyadana,L,belum terisi,X-1,belum terisi
+0096242967,Pradipta Arya Hendrayana,L,belum terisi,X-1,belum terisi
+0093858422,Sachio Ardra Mumtaz,L,belum terisi,X-1,belum terisi
+0097011174,Teuku Hafiz Fatturahman,L,belum terisi,X-1,belum terisi
+0089730810,Wildan Ilya,L,belum terisi,X-1,belum terisi
+3093333258,Abdullah,L,belum terisi,X-2,belum terisi
+0092172723,Abdurrahman Al Ghifari,L,belum terisi,X-2,belum terisi
+0083836528,Abiyan Nararya,L,belum terisi,X-2,belum terisi
+0087349522,Admiral Jundulhaqq Agung Gunawan,L,belum terisi,X-2,belum terisi
+0082883572,Ahmad Faiz Jihadi,L,belum terisi,X-2,belum terisi
+3096121454,Ahmad Osama,L,belum terisi,X-2,belum terisi
+0098800461,Ahnaf Syafiq Sholahuddin,L,belum terisi,X-2,belum terisi
+0098397362,Ascarya Narendra Yodha Sasongko,L,belum terisi,X-2,belum terisi
+0096871107,Bima Arya Rafif,L,belum terisi,X-2,belum terisi
+0098345868,Danish Affan Firdaus,L,belum terisi,X-2,belum terisi
+0093713748,Danish Primaraffa Kusumajaya,L,belum terisi,X-2,belum terisi
+0097198460,Fakhri Al Ghifari,L,belum terisi,X-2,belum terisi
+0096864201,Fathi Abdullah Fikriy,L,belum terisi,X-2,belum terisi
+0086318741,Haidar Hanif Nurcahya,L,belum terisi,X-2,belum terisi
+0093240173,Haikal Rizky Prayoga,L,belum terisi,X-2,belum terisi
+0098677216,Keandre Donny Fernanda,L,belum terisi,X-4,belum terisi
+0093837182,Muhammad Ammar Athaillah,L,belum terisi,X-2,belum terisi
+0094878947,Muhammad Aulia Al Fata,L,belum terisi,X-2,belum terisi
+0082679816,Muhammad Azzhafran Nur,L,belum terisi,X-2,belum terisi
+3084866319,Muhammad Farel Rahmadana,L,belum terisi,X-2,belum terisi
+0091729203,Muhammad Fathan Maulana,L,belum terisi,X-2,belum terisi
+0093641271,Muhammad Fathiril Akhtar,L,belum terisi,X-2,belum terisi
+0099298107,Muhammad Fawwaz Zulfadli Hasan,L,belum terisi,X-2,belum terisi
+0092941216,Muhammad Fayzan Raza Walidi,L,belum terisi,X-2,belum terisi
+0098758887,Muhammad Reiza Ismail,L,belum terisi,X-2,belum terisi
+0095791472,Muhammad Umar Syafiq Thalib,L,belum terisi,X-2,belum terisi
+0089211638,Mochamad Farhan Hafidzuddin,L,belum terisi,X-2,belum terisi
+0099966415,Reyhan Gavin Al-Faruq,L,belum terisi,X-2,belum terisi
+3082356108,Rhasya Octavian Fahlevi,L,belum terisi,X-2,belum terisi
+0092958090,Ridho Langit Prakoso,L,belum terisi,X-2,belum terisi
+0079589681,Shafa Nabil Fashih,L,belum terisi,X-2,belum terisi
+0096904075,Sultan Fikri Mahri,L,belum terisi,X-2,belum terisi
+0083714219,Aliffasha Ghandur Misbahuddin,L,belum terisi,X-3,belum terisi
+0095591480,Alisyar Azis Muhara,L,belum terisi,X-3,belum terisi
+0089864528,Alvinoor Rosyad Rie Angel,L,belum terisi,X-3,belum terisi
+0088967382,Akhtar Rashif Asali,L,belum terisi,X-3,belum terisi
+0087553918,Ammar Dzaki,L,belum terisi,X-3,belum terisi
+0093648743,Ataya Enzo Abhimanyu,L,belum terisi,X-3,belum terisi
+0093573542,Audra Farzana Yudistira,L,belum terisi,X-3,belum terisi
+0085686577,Aufa Abdurrahman,L,belum terisi,X-3,belum terisi
+0091859101,Davin Maulana Hartoyo,L,belum terisi,X-3,belum terisi
+0094492730,Dzaky Asfa Pradipta,L,belum terisi,X-3,belum terisi
+0095243481,Fathir Ihsan Pratama,L,belum terisi,X-3,belum terisi
+0092762211,Gibrand Shaquille Almaududie,L,belum terisi,X-3,belum terisi
+0099484050,Huga Sawyasachi Anubhawa,L,belum terisi,X-3,belum terisi
+0091798362,Miftahu Daffa Pratama,L,belum terisi,X-3,belum terisi
+0098621470,Muhammad Akhtar Rasyidi,L,belum terisi,X-3,belum terisi
+0092299755,Muhammad Alvin Faiz,L,belum terisi,X-3,belum terisi
+0095797067,Muhammad 'Adl Asshodiq,L,belum terisi,X-3,belum terisi
+0083007677,Muhammad Al Fayyadh Prasetyo,L,belum terisi,X-3,belum terisi
+0095812143,Muhammad Hafiz Alfatih,L,belum terisi,X-3,belum terisi
+0097412333,Muhammad Izudin Al Qosam,L,belum terisi,X-3,belum terisi
+0088444494,Muhammad Keanu Al-Ghazali,L,belum terisi,X-3,belum terisi
+0096683528,Muhammad Khalifah Bumi Maharddhika,L,belum terisi,X-3,belum terisi
+3097816971,Muhammad Rakha Rasyid,L,belum terisi,X-3,belum terisi
+0093462949,Muhammad Raffi Ramadhan,L,belum terisi,X-3,belum terisi
+0086066273,Moch. Arman Maulana Arsyad,L,belum terisi,X-3,belum terisi
+0092485390,Nadhifa Ammar Tsaqif Supriyanto,L,belum terisi,X-3,belum terisi
+0108478983,Naryama Arif Akram,L,belum terisi,X-3,belum terisi
+0093625729,Raffa Ahmad Al Aula,L,belum terisi,X-3,belum terisi
+0094176649,Rafif Aldriona Riftanto,L,belum terisi,X-3,belum terisi
+0102960010,Syafiqul Thufail,L,belum terisi,X-3,belum terisi
+0094926702,Zayidanil Khoiril Vimal,L,belum terisi,X-3,belum terisi
+0097624699,Abyan Gamiel Nugroho,L,belum terisi,X-4,belum terisi
+0087420856,Ahmad Fachri Pratama,L,belum terisi,X-4,belum terisi
+0084859821,Ahmad Agung Naufal,L,belum terisi,X-4,belum terisi
+3084489254,Alvino Muhammad Pambudi,L,belum terisi,X-4,belum terisi
+0089125442,Anaqi Alzam Kurniawan,L,belum terisi,X-2,belum terisi
+0083233248,Daffi Fathir Raditya,L,belum terisi,X-4,belum terisi
+0089365829,Daniyal Fahmi Kuddah,L,belum terisi,X-4,belum terisi
+0086451222,Devin Winada Purba,L,belum terisi,X-4,belum terisi
+0088351413,Fardan Dzaki Abadi,L,belum terisi,X-4,belum terisi
+0098756632,Fatih Narda Pradipta,L,belum terisi,X-4,belum terisi
+0084271476,Fikri Muhammad Khasfi,L,belum terisi,X-4,belum terisi
+0099004725,Fayzal Aqil Rabbani,L,belum terisi,X-4,belum terisi
+0088582405,Farid Wibowo Aludjati Asmoro,L,belum terisi,X-4,belum terisi
+3096773554,Haekal Ibnu Fadillah,L,belum terisi,X-4,belum terisi
+0071574164,Ibrahim,L,belum terisi,X-4,belum terisi
+0089998184,Lucky Sampoerna,L,belum terisi,X-4,belum terisi
+0094439209,Muhafiz adli fathi,L,belum terisi,X-4,belum terisi
+0089646546,Muhammad Abu Bakar Ash Shiddiq,L,belum terisi,X-4,belum terisi
+0095647369,Muhammad Adzfar Narendra Rachim,L,belum terisi,X-4,belum terisi
+0086087164,Muhammad Akhyar Sahal,L,belum terisi,X-4,belum terisi
+0095330023,Muhammad Alfath Firdaus,L,belum terisi,X-4,belum terisi
+0088463280,Muhammad Fadlan Ramadhan,L,belum terisi,X-4,belum terisi
+0082758354,Muhammad Fikri Robbani,L,belum terisi,X-4,belum terisi
+0091921849,Muhammad Raihan Effendi,L,belum terisi,X-4,belum terisi
+0096382954,Muhammad Zafran Wahyudhiya,L,belum terisi,X-4,belum terisi
+neil,Neil Alfath Setyawan,L,belum terisi,X-3,belum terisi
+0099486561,Shane Fahlavi Mulayana,L,belum terisi,X-4,belum terisi
+tubagus,Tubagus Bima Bagasatria Handilah Putra,L,belum terisi,X-4,belum terisi
+0087662389,Abdurrahman Hafizh Al Arfa,L,belum terisi,XI-1,belum terisi
+0089089847,Ahmad Dzaki,L,belum terisi,XI-1,belum terisi
+0075584981,Andi Muhammad Ulinnuha Guliga,L,belum terisi,XI-1,belum terisi
+0089999232,Arkhan Ad'Din,L,belum terisi,XI-1,belum terisi
+0085638098,Athalla Ahmad Akhtarsyah,L,belum terisi,XI-1,belum terisi
+0081419592,Aufa Khizam,L,belum terisi,XI-1,belum terisi
+0086808004,Dimar Hartomo,L,belum terisi,XI-1,belum terisi
+0083835326,Dimas Setyo Andaru,L,belum terisi,XI-1,belum terisi
+0089969867,Dyandra Arhamaqila Purnomosunu,L,belum terisi,XI-1,belum terisi
+0084122695,Faishal Rafi Kampono,L,belum terisi,XI-1,belum terisi
+0083321815,Fakhri Rafi Iqbal Habibi,L,belum terisi,XI-1,belum terisi
+0061609207,Hasan Fakhroo Saleh Al Huda,L,belum terisi,XI-1,belum terisi
+0087728452,Ilman Firjatullah Anwar,L,belum terisi,XI-1,belum terisi
+0076053478,Irsyadul Ubad Suhendra,L,belum terisi,XI-1,belum terisi
+0081252777,Mohammad Evan Wiratama,L,belum terisi,XI-1,belum terisi
+0083423257,Muhamad Jafarudin Khalid,L,belum terisi,XI-1,belum terisi
+0087249112,Muhammad Althaf Syam Dhiaulhaq,L,belum terisi,XI-1,belum terisi
+0075318576,Muhammad Ammar Elang Wargono Surijohansyah,L,belum terisi,XI-1,belum terisi
+0085299566,Muhammad Athar Hamizan,L,belum terisi,XI-1,belum terisi
+0081657919,Muhammad Fakhri Al Disa,L,belum terisi,XI-1,belum terisi
+0083129410,Muhammad Ghazalah Waas,L,belum terisi,XI-1,belum terisi
+3087017468,Muhammad Rai Priya Ananda,L,belum terisi,XI-1,belum terisi
+0077052821,Nawfal Farhad Hauda,L,belum terisi,XI-1,belum terisi
+0081903667,Rafa Ramdhani,L,belum terisi,XI-1,belum terisi
+0086969774,Rafif Azzam Hernawan,L,belum terisi,XI-1,belum terisi
+0081386235,Raif Muhammad Alifyadi,L,belum terisi,XI-1,belum terisi
+0071569193,Rasya Syauki Fadillah,L,belum terisi,XI-1,belum terisi
+0088169210,Rifqy Abdillah Azzumar,L,belum terisi,XI-1,belum terisi
+0077216836,Rigel Zahran Wibowo,L,belum terisi,XI-1,belum terisi
+0085834835,Sabian Athaya Suwisar,L,belum terisi,XI-1,belum terisi
+0085236094,Zikri Alfi Syahri,L,belum terisi,XI-1,belum terisi
+0082026377,Aripa Hafizd Alfayed,L,belum terisi,XI-2,belum terisi
+0073743614,Athoillah Fajar Al Bahri,L,belum terisi,XI-2,belum terisi
+0087338385,Bamantara Muhammad Hanif,L,belum terisi,XI-2,belum terisi
+0083973956,Danendra Delbert Daffa Mu'Min,L,belum terisi,XI-2,belum terisi
+0077819219,Farras Ekadinata Putera,L,belum terisi,XI-2,belum terisi
+0088573860,Fathan Al Rajab,L,belum terisi,XI-2,belum terisi
+0087469279,Fathan Handaru Arif,L,belum terisi,XI-2,belum terisi
+0093537196,Fathan Rizki Rabbani,L,belum terisi,XI-2,belum terisi
+0085271691,Ghodzian Dhiyaulhaq,L,belum terisi,XI-2,belum terisi
+3087810429,Hakam Azka Shabri,L,belum terisi,XI-2,belum terisi
+0079087157,Hamizan Abiyyu Zhalifunnas,L,belum terisi,XI-2,belum terisi
+0088592533,Ilyas Hanif Taqiyuddin Ahmad,L,belum terisi,XI-2,belum terisi
+0073126918,Khazinullah,L,belum terisi,XI-2,belum terisi
+0084753805,M. Daffa As Shiddiq,L,belum terisi,XI-2,belum terisi
+0081942570,Mirza Fawwaz Abiyu,L,belum terisi,XI-2,belum terisi
+0082868628,Muchammad Zahir Hafidz Rachmatullah,L,belum terisi,XI-2,belum terisi
+agam,Muhammad Agam Laakhauf,L,belum terisi,XI-2,belum terisi
+0082963367,Muhammad Adly Putra Prasetya,L,belum terisi,XI-2,belum terisi
+0088777637,Muhammad Arka Fadhilah,L,belum terisi,XI-2,belum terisi
+0089084806,Muhammad Azzam Aryasatya,L,belum terisi,XI-2,belum terisi
+0086991997,Muhammad Faiz Arrazi Mulia,L,belum terisi,XI-2,belum terisi
+0087436297,Rafif Ibni Dzaky,L,belum terisi,XI-2,belum terisi
+0089262650,Fauzi Akbar,L,belum terisi,XI-3,belum terisi
+0071730688,Ihsan Abdullah,L,belum terisi,XI-3,belum terisi
+0078811882,Muhammad Aflah Pratama,L,belum terisi,XI-3,belum terisi
+3086245613,Muhammad Aslam,L,belum terisi,XI-3,belum terisi
+0086250312,Muhammad Faiz Tawfiq Marzuqi,L,belum terisi,XI-3,belum terisi
+0082100502,Muhammad Fathi Safir Athallah,L,belum terisi,XI-3,belum terisi
+0086059028,Muhammad Fauzan Hilmi,L,belum terisi,XI-3,belum terisi
+0079865016,Muhammad Hisyam Naufal,L,belum terisi,XI-3,belum terisi
+0074560752,Muhammad Ihsan Manaf,L,belum terisi,XI-3,belum terisi
+0083203446,Muhammad Ikhsan Zulhilmi,L,belum terisi,XI-3,belum terisi
+0082314966,Muhammad Rafi Isra,L,belum terisi,XI-3,belum terisi
+0087744094,Muhammad Rafly Al Gafary,L,belum terisi,XI-3,belum terisi
+0087310397,Muhammad Razan Al Hakim,L,belum terisi,XI-3,belum terisi
+0086074246,Muhammad Sultan Aqdas Ahdar,L,belum terisi,XI-3,belum terisi
+3085941135,Muhammad Syahmi Nugraha,L,belum terisi,XI-3,belum terisi
+0088690291,Muhammad Wahyu Auliya,L,belum terisi,XI-3,belum terisi
+0088985854,Naufal Aqilah Hafizh,L,belum terisi,XI-3,belum terisi
+0087262140,Rafif Febriadhy,L,belum terisi,XI-3,belum terisi
+0083553254,Raihan Adli Putra,L,belum terisi,XI-3,belum terisi
+0078480809,Raihan Fadhlurrohman,L,belum terisi,XI-3,belum terisi
+3072961428,Ramdhan Fahrani Adam,L,belum terisi,XI-3,belum terisi
+0085465420,Razan Adli Amirta,L,belum terisi,XI-3,belum terisi
+0071419257,Rian Nafiansyah,L,belum terisi,XI-3,belum terisi
+0081076092,Ridhwan Firdaus,L,belum terisi,XI-3,belum terisi
+0077226013,Sher Ziananda Fraise,L,belum terisi,XI-3,belum terisi
+3072240419,Ahmad Zahid,L,belum terisi,XI-4,belum terisi
+0142745226,Asytar Nazran Mulyadi,L,belum terisi,XI-4,belum terisi
+0066266550,Bintang Novally,L,belum terisi,XI-4,belum terisi
+0087882541,Fadhil Akbari Hartono,L,belum terisi,XI-4,belum terisi
+0076634083,Fadhil Satria Utama,L,belum terisi,XI-4,belum terisi
+0088427973,Faiq Aunur Rahman,L,belum terisi,XI-4,belum terisi
+0089154068,Farhan Satrio Nugroho,L,belum terisi,XI-4,belum terisi
+0081991132,Farras Jabbar Rasya,L,belum terisi,XI-4,belum terisi
+0087218034,Ghazy Abiyyu Ammar Mubara,L,belum terisi,XI-4,belum terisi
+0088835129,Haikal Bagus Nugroho,L,belum terisi,XI-4,belum terisi
+0087545175,Hava Satya Bayanaka,L,belum terisi,XI-4,belum terisi
+3083522466,M Dava Adi Maulana,L,belum terisi,XI-4,belum terisi
+0084299782,Muh Fathir Syach Khalique,L,belum terisi,XI-4,belum terisi
+0084231051,Muhammad Abbas,L,belum terisi,XI-4,belum terisi
+0087536754,Muhammad Danendra Alsyakara,L,belum terisi,XI-4,belum terisi
+0085418859,Muhammad Fadhlan,L,belum terisi,XI-4,belum terisi
+0089590303,Muhammad Farhan,L,belum terisi,XI-4,belum terisi
+0086689837,Muhammad Fathi Ayyasy Ardhiyasa,L,belum terisi,XI-4,belum terisi
+0083373523,Muhammad Irsyad Muzaki,L,belum terisi,XI-4,belum terisi
+0081659107,Muhammad Naufal Fadhli,L,belum terisi,XI-4,belum terisi
+0086251912,Muhammad Rasendriya Abimanyu,L,belum terisi,XI-4,belum terisi
+0077184101,Muhammad Ridwan Putra,L,belum terisi,XI-4,belum terisi
+0079102998,Muhammad Shidqi Al Fatih,L,belum terisi,XI-4,belum terisi
+0081075024,Rakha Bari Zhafran,L,belum terisi,XI-4,belum terisi
+3091483964,Umar,L,belum terisi,XI-4,belum terisi
+0075146951,Ahmad Salman Fauzan,L,belum terisi,XI-5,belum terisi
+0083768443,Albie Ravindra Fahd,L,belum terisi,XI-5,belum terisi
+0085266049,Fatteh Rahman,L,belum terisi,XI-5,belum terisi
+0079626959,Khaindra Arfan Farhanul Irsyad,L,belum terisi,XI-5,belum terisi
+3081996445,M. Fatih Yusuf Rahman,L,belum terisi,XI-5,belum terisi
+0042739649,Mochammad Haikal,L,belum terisi,XI-5,belum terisi
+0074438286,Muhamad Rifat,L,belum terisi,XI-5,belum terisi
+0082219131,Muhammad Abizar Putra Antoko,L,belum terisi,XI-5,belum terisi
+0082330631,Muhammad Farrel Julian,L,belum terisi,XI-5,belum terisi
+0084720980,Muhammad Ghani Putra Ardiansyah,L,belum terisi,XI-5,belum terisi
+0085835421,Muhammad Lintang Aksana,L,belum terisi,XI-5,belum terisi
+0064973684,Muhammad Rasyid Maulana,L,belum terisi,XI-5,belum terisi
+0073941599,Rafsya Hadyan Ghazy,L,belum terisi,XI-5,belum terisi
+0071942576,Rakha Amandani,L,belum terisi,XI-5,belum terisi
+0087675913,Teuku Rasya,L,belum terisi,XI-5,belum terisi
+0084157883,Use'Id Al Farros,L,belum terisi,XI-5,belum terisi
+0084938392,Wafi Pratama Hasibuan,L,belum terisi,XI-5,belum terisi
+0082612974,Wafikayubi Ahmad Giarno,L,belum terisi,XI-5,belum terisi
+0076174239,Abyanza Fathin Poso Arian Putra,L,belum terisi,XII-1,belum terisi
+0077773050,Ahmad Naufal Dwiputra,L,belum terisi,XII-1,belum terisi
+0077872593,Bagas Pramudita Daniswara,L,belum terisi,XII-1,belum terisi
+0062932511,Fabian Ghanny Wibawadi,L,belum terisi,XII-1,belum terisi
+0076797439,Faiz Naufal Mu'Thasim,L,belum terisi,XII-1,belum terisi
+0073361099,Faizin Muhammad Khairul Arkan,L,belum terisi,XII-1,belum terisi
+0075392839,Gibr Al-Tariq Pahlevi,L,belum terisi,XII-1,belum terisi
+0065227691,Jibril Hakeem Rosananta,L,belum terisi,XII-1,belum terisi
+0063563297,Khalid,L,belum terisi,XII-1,belum terisi
+0073520173,Khalifa Utsula Permana,L,belum terisi,XII-1,belum terisi
+0075668884,Muhammad Akbar Habibi Tarigan,L,belum terisi,XII-1,belum terisi
+0078526271,Muhammad Aqiel Radin Syah,L,belum terisi,XII-1,belum terisi
+0075802535,Muhammad Azraf Mohalisi,L,belum terisi,XII-1,belum terisi
+0078544498,Muhammad Bintang Ilya,L,belum terisi,XII-1,belum terisi
+0075550238,Muhammad Dhiyaurrahman,L,belum terisi,XII-1,belum terisi
+0061806662,Muhammad Furqon Hasan,L,belum terisi,XII-1,belum terisi
+0072897766,Muhammad Hafidh Al Habibie,L,belum terisi,XII-1,belum terisi
+0075087938,Muhammad Mekka Pasha Al-Fawwazi,L,belum terisi,XII-1,belum terisi
+0075722593,Muhammad Mirza Ghifari,L,belum terisi,XII-1,belum terisi
+0079921522,Muhammad Nur Qoisan Nauwari,L,belum terisi,XII-1,belum terisi
+0089370124,Muhammad Zidan Alrofi,L,belum terisi,XII-1,belum terisi
+0077583487,Muhammad Zikra Abdillah,L,belum terisi,XII-1,belum terisi
+0072174244,Mullana Khalis Ismael,L,belum terisi,XII-1,belum terisi
+0077478606,Pasya Verdiansyah Haryadi,L,belum terisi,XII-1,belum terisi
+0074088696,Raganva Dimiano Putra,L,belum terisi,XII-1,belum terisi
+0032811790,Raihan Azhar Haris,L,belum terisi,XII-1,belum terisi
+0071639566,Razan Muhammad Ihsan,L,belum terisi,XII-1,belum terisi
+0088546589,Rizqi Zaki Anggoro,L,belum terisi,XII-1,belum terisi
+0066869293,Wibisono Ananta Dahlan,L,belum terisi,XII-1,belum terisi
+0065053387,Affan Nur Ihsan,L,belum terisi,XII-2,belum terisi
+0071441862,Ananda Dito Aprilio,L,belum terisi,XII-2,belum terisi
+0067644913,Baroka Dewa Alfitra,L,belum terisi,XII-2,belum terisi
+0075727380,Dhafin Fahrezy Sahama,L,belum terisi,XII-2,belum terisi
+0076638538,Dimas Shiddiq Nurkrisna Putra,L,belum terisi,XII-2,belum terisi
+0061924150,Kaisan Nouval Ali,L,belum terisi,XII-2,belum terisi
+0074636893,Khalef Zizou Adhriano,L,belum terisi,XII-2,belum terisi
+0061308611,Khalid Ahmad Al-Aziz,L,belum terisi,XII-2,belum terisi
+0074968229,Muhammad Abiy Haydhar,L,belum terisi,XII-2,belum terisi
+0078442031,Muhammad Fadhil Ghifarry Azhar,L,belum terisi,XII-2,belum terisi
+0079282873,Muhammad Fakhry Ziyaulhaq,L,belum terisi,XII-2,belum terisi
+0071759542,Muhammad Fikri Habiburrokhim S,L,belum terisi,XII-2,belum terisi
+0077908698,Muhammad Hammam Abdillah,L,belum terisi,XII-2,belum terisi
+0073512362,Muhammad Miftah Rasyid,L,belum terisi,XII-2,belum terisi
+0069051703,Muhammad Rhadil Alfaiz,L,belum terisi,XII-2,belum terisi
+0072290572,Muhammad Satrya Wicaksana,L,belum terisi,XII-2,belum terisi
+0074079186,Muhammad Yeza Pratama,L,belum terisi,XII-2,belum terisi
+0062130309,Muhammad Zaki,L,belum terisi,XII-2,belum terisi
+0065814290,Nazmi Alvan Navarro Taufik,L,belum terisi,XII-2,belum terisi
+0071254017,Omar Fathi Biedermann,L,belum terisi,XII-2,belum terisi
+0076859274,R Muhammad Ichsan Alfachrozi,L,belum terisi,XII-2,belum terisi
+0071151768,Raihan Ramadhan Ismail,L,belum terisi,XII-2,belum terisi
+0062864071,Reyhan Ramadhan Adiaputra,L,belum terisi,XII-2,belum terisi
+0066310273,Rofiq Abdul Jabbar,L,belum terisi,XII-2,belum terisi
+0078064825,Sultan Naufal Athaillah,L,belum terisi,XII-2,belum terisi
+0077270170,Abiyyu Hasya Adiwitya Deni,L,belum terisi,XII-3,belum terisi
+0072840766,Atha'ur Rahman Saputra,L,belum terisi,XII-3,belum terisi
+0076853475,Danish Ghozian Pramudya,L,belum terisi,XII-3,belum terisi
+0078234225,Elnatores Rafi Anargya,L,belum terisi,XII-3,belum terisi
+0078961235,Eshan Azkardhia Arianto,L,belum terisi,XII-3,belum terisi
+0079815950,Fadawkas Ammar Abdillah,L,belum terisi,XII-3,belum terisi
+0061351461,Fadzil Algifa Kustiadi,L,belum terisi,XII-3,belum terisi
+0134119026,Hafuza Riffat,L,belum terisi,XII-3,belum terisi
+0071992760,M. Jefry Leonardi,L,belum terisi,XII-3,belum terisi
+0069899276,Mohammad Faiz Pramadhana,L,belum terisi,XII-3,belum terisi
+0076533982,Muhammad Alfahrezy,L,belum terisi,XII-3,belum terisi
+0072025511,Muhammad Ali Dzul Fiqar,L,belum terisi,XII-3,belum terisi
+0078201632,Muhammad Aljadid Pangestu,L,belum terisi,XII-3,belum terisi
+0076640544,Muhammad Dafi' Arrizqi,L,belum terisi,XII-3,belum terisi
+0075484859,Muhammad Fillah Attaqi Idris,L,belum terisi,XII-3,belum terisi
+0077836016,Muhammad Hafizh Yanuarso,L,belum terisi,XII-3,belum terisi
+0071620179,Muhammad Hanif,L,belum terisi,XII-3,belum terisi
+0065462081,Muzakki Al Ghifari Siregar,L,belum terisi,XII-3,belum terisi
+0076387601,Najwan Muhammad Abdullah,L,belum terisi,XII-3,belum terisi
+0072475267,Naufal Abyansyah,L,belum terisi,XII-3,belum terisi
+0077955497,Naufal Zhafran,L,belum terisi,XII-3,belum terisi
+0069854666,Syah Rayfa Muhammad Fatih,L,belum terisi,XII-3,belum terisi
+0079882132,Abdurrahman Raziq,L,belum terisi,XII-4,belum terisi
+0073543445,Achmad Farrel Budi Putra,L,belum terisi,XII-4,belum terisi
+0077466033,Adib Fahmi Sumantri,L,belum terisi,XII-4,belum terisi
+0072231726,Anugerah Bintang Ramadhan,L,belum terisi,XII-4,belum terisi
+0071296747,Aqsa Abyasa Ibnu,L,belum terisi,XII-4,belum terisi
+0075312494,Dafa Putra Radityo,L,belum terisi,XII-4,belum terisi
+3072869217,Fabian Milanov,L,belum terisi,XII-4,belum terisi
+0072665435,Fadel Muhammad Ghaisani,L,belum terisi,XII-4,belum terisi
+0076535444,Fadli Robby Faazany,L,belum terisi,XII-4,belum terisi
+0077290467,Hafizh Muhammad Rizky,L,belum terisi,XII-4,belum terisi
+0073978709,Haikal Ramdhani,L,belum terisi,XII-4,belum terisi
+0079694212,Hamizan Taqiyuddin Andriarso,L,belum terisi,XII-4,belum terisi
+0073072827,Hanif Febrian Abdurrahman,L,belum terisi,XII-4,belum terisi
+0074272584,Hazriel Harsya Shevaska,L,belum terisi,XII-4,belum terisi
+3067938952,Ibrahim Ash Shiddiq,L,belum terisi,XII-4,belum terisi
+0075606260,Ismail Mubarok,L,belum terisi,XII-4,belum terisi
+0078701305,Keanu Rasya Putnik,L,belum terisi,XII-4,belum terisi
+0076901026,Muhammad Farrel Rizki Ramadhan,L,belum terisi,XII-4,belum terisi
+0077847100,Muhammad Fawwaz Ziyad,L,belum terisi,XII-4,belum terisi
+0075506546,Muhammad Hadziqi Rifiansyah,L,belum terisi,XII-4,belum terisi
+0077320123,Muhammad Nathiq Jamesha Alfatih,L,belum terisi,XII-4,belum terisi
+0071028689,Muhammad Navaro Dhirgam R.,L,belum terisi,XII-4,belum terisi
+0078086745,Muhammad Umar Abdurrauf,L,belum terisi,XII-4,belum terisi
+0076135855,Rafay Aidan Syachnema,L,belum terisi,XII-4,belum terisi
+0066427207,Raffy Ahsan Dhiya Althaf,L,belum terisi,XII-4,belum terisi
+0078066938,Rheifan Jordan Reynara,L,belum terisi,XII-4,belum terisi
+0078084873,Ziyad Albarizy Cakradwipa,L,belum terisi,XII-4,belum terisi
+0077389534,Abdullah Ahmad Arkam,L,belum terisi,XII-5,belum terisi
+0068157511,Abdullah Isyah Haniyyah,L,belum terisi,XII-5,belum terisi
+0068592685,Abdurrahman Faishal,L,belum terisi,XII-5,belum terisi
+0075736892,Alfandi Moreyno Reynardo Prayogo,L,belum terisi,XII-5,belum terisi
+0063494546,Alib Alghiffari,L,belum terisi,XII-5,belum terisi
+0077825296,Anas Gusti Syaukani,L,belum terisi,XII-5,belum terisi
+0077301988,Banyu Biru Suryawan,L,belum terisi,XII-5,belum terisi
+0076927787,Dzaky Ahmad Favian,L,belum terisi,XII-5,belum terisi
+0079418397,Dzaky Hassan,L,belum terisi,XII-5,belum terisi
+0063919342,Fadhil Rizki Ramadhan,L,belum terisi,XII-5,belum terisi
+0072302598,Fadli,L,belum terisi,XII-5,belum terisi
+0068182052,Farasya Amran Sadid,L,belum terisi,XII-5,belum terisi
+0076022530,Hanan Djulkarnain,L,belum terisi,XII-5,belum terisi
+0079768360,Hardwin Israyanda,L,belum terisi,XII-5,belum terisi
+0068322247,Hizam,L,belum terisi,XII-5,belum terisi
+0074577600,Khairul Mubarok,L,belum terisi,XII-5,belum terisi
+0068059491,Kimi Abyan Fergal,L,belum terisi,XII-5,belum terisi
+0072872778,Muhammad Alif Al Farras,L,belum terisi,XII-5,belum terisi
+0067852058,Muhammad Daffa Dhiya Ulhaq,L,belum terisi,XII-5,belum terisi
+0066125649,Muhammad Iffat Naufal,L,belum terisi,XII-5,belum terisi
+0061700094,Muhammad Nur Alviansyah,L,belum terisi,XII-5,belum terisi
+0072434100,Rafi Amar Rhosan,L,belum terisi,XII-5,belum terisi
+0075072671,Rahim Fachri Wibowo,L,belum terisi,XII-5,belum terisi
+0062159252,Syauqillah Shidiq Ritonga,L,belum terisi,XII-5,belum terisi
+0079745821,Zinedine Al Haadii,L,belum terisi,XII-5,belum terisi
+123456,Asep,L,Jakarta,XII,Jakarta
+wira,Wira Arverino,L,Jakarta,X-4,Jakarta
+sholihin,Muhammad Sholihin Ramadansyah,L,belum terisi,X-3,belum terisi

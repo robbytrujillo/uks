@@ -18,9 +18,9 @@
 				<th>NISN</th>
 				<th>Nama</th>
 				<th>Jenis Kelamin</th>
-				<th>Asal</th>
-				<th>Rombel Kelas</th>
-				<th>Tingkat Kelas</th>
+				<th>Alamat</th>
+				<th>Kelas</th>
+				<th>Angkatan</th>
 			</tr>
 	</thead>
 	<tbody>	
@@ -32,9 +32,9 @@
 			echo "<td>".$data->nis."</td>";
 			echo "<td>".$data->nama."</td>";
 			echo "<td>".$data->jk."</td>";
-			echo "<td>".$data->rayon."</td>";
-			echo "<td>".$data->rombel."</td>";
+			echo "<td>".$data->alamat."</td>";
 			echo "<td>".$data->kelas."</td>";
+			echo "<td>".$data->angkatan."</td>";
 			echo "</tr>";
 		}
 	}else{ // Jika data tidak ada

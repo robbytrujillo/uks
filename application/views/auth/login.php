@@ -42,8 +42,8 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" style="font-size: medium">
+                  <div class="form-group; rounded-pill">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block rounded-pill" tabindex="4" style="font-size: medium">
                       Login
                     </button>
                   </div>

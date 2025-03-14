@@ -8,7 +8,7 @@
 	</style>
 	<div class="text-center">
 		<br>
-			<h1 align="center" style="color: black;"><img src="../image/ihbs-logo-2.png" style="height: 50px; padding-bottom: 10px;"><span style="color: #467228">UKS SMA</span></h1>
+			<h1 align="center" style="color: black;"><img src="../image/ihbs-logo-2.png" style="height: 50px; padding-bottom: 10px;"><span style="color: #467228">UKS IHBS</span></h1>
 			<p align="center" style="color: black;"> Jl. Bungur 2 Harjamukti Cimanggis Depok Jawa Barat</p>
 			<hr>
 			<br>
@@ -22,7 +22,7 @@
 					<th>NISN</th>
 					<th>Nama</th>
 					<th>Kelas</th>
-					<th>Asal</th>
+					<th>Alamat</th>
 					<th>Diagnosa</th>
 					<th>Penanganan</th>
 				</tr>
@@ -38,8 +38,8 @@
 						<td><?= $value->tgl_sakit ?></td>
 						<td><?= $value->nis ?></td>
 						<td><?= $value->nama ?></td>
-						<td><?= $value->rombel ?></td>
-						<td><?= $value->rayon ?></td>
+						<td><?= $value->kelas ?></td>
+						<td><?= $value->alamat ?></td>
 						<td><?= $value->diagnosa ?></td>
 						<td><?= $value->penanganan ?></td>
 					</tr>

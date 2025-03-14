@@ -20,12 +20,12 @@
 									<input type="text" name="nama" disabled class="form-control text-dark" value="<?= $data->nama  ?>">
 								</div>
 								<div class="form-group">
-									<label>Rombel Kelas</label>
-									<input type="text" name="rombel" disabled  class="form-control text-dark" value="<?= $data->rombel  ?>">
+									<label>Kelas</label>
+									<input type="text" name="kelas" disabled  class="form-control text-dark" value="<?= $data->rombel  ?>">
 								</div>
 								<div class="form-group">
-									<label>Asal</label>
-									<input type="text" name="rayon" disabled  class="form-control text-dark" value="<?= $data->rayon  ?>">
+									<label>Alamat</label>
+									<input type="text" name="alamat" disabled  class="form-control text-dark" value="<?= $data->rayon  ?>">
 								</div>
 								<div class="form-group">
 									<label>Tanggal</label>

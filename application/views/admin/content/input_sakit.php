@@ -57,7 +57,7 @@
 											<th>NISN</th>
 											<th>Nama</th>
 											<th>Kelas</th>
-											<th>Asal</th>
+											<th>Alamat</th>
 											<th>Tanggal</th>
 											<th>TD</th>
 											<th>Suhu</th>
@@ -75,8 +75,8 @@
 											<td><?= $no++ ?></td>
 											<td><?= $sakut->nis ?></td>
 											<td><?= $sakut->nama ?></td>
-											<td><?= $sakut->rombel ?></td>
-											<td><?= $sakut->rayon ?></td>
+											<td><?= $sakut->kelas ?></td>
+											<td><?= $sakut->alamat ?></td>
 											<td><?= $sakut->tgl_sakit  ?></td>
 											<th><?= $sakut->tekanan_darah ?></th>
 											<th><?= $sakut->suhu ?></th>

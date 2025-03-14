@@ -22,8 +22,8 @@
                           <th scope="col">No.</th>
                           <th scope="col">NISN</th>
                           <th scope="col">Nama</th>
-                          <th scope="col">Rombel Kelas</th>
-                          <th scope="col">Asal</th>
+                          <th scope="col">Kelas</th>
+                          <th scope="col">Alamat</th>
                           <th>Jumlah Sakit</th>
                         </tr>
                       </thead>
@@ -35,8 +35,8 @@
                           <th scope="row"><?= $no++ ?></th>
                           <td><?= $data->nis ?></td>
                           <td><?= $data->nama ?></td>
-                          <td><?= $data->rombel ?></td>
-                          <td><?= $data->rayon ?></td>
+                          <td><?= $data->kelas ?></td>
+                          <td><?= $data->alamat ?></td>
                           <?php 
                           if ($data->data <= 1) { ?>
                             <td><span class="badge badge-primary"><?= $data->data?></span></td>

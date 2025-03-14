@@ -17,8 +17,8 @@
 										<th>Tanggal</th>
 										<th>NISN</th>
 										<th>Nama</th>
-										<th>Rombel Kelas</th>
-										<th>Asal</th>
+										<th>Kelas</th>
+										<th>Alamat</th>
 										<th>Diagnosa</th>
 									</tr>
 								</thead>
@@ -30,8 +30,8 @@
 										<td><?= $value->tgl_sakit ?></td>
 										<td><?= $value->nis ?></td>
 										<td><?= $value->nama ?></td>
-										<td><?= $value->rombel ?></td>
-										<td><?= $value->rayon ?></td>
+										<td><?= $value->kelas ?></td>
+										<td><?= $value->alamat ?></td>
 										<td><?= $value->diagnosa ?></td>
 									</tr>
 								<?php } ?>
