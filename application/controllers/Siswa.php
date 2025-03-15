@@ -50,7 +50,7 @@ class Siswa extends CI_Controller {
 	
 	public function import(){
 		// Load plugin PHPExcel nya
-		// include APPPATH.'third_party/PHPExcel/PHPExcel.php';
+		include APPPATH.'third_party/PHPExcel/PHPExcel.php';
 		
 		// $xlsxreader = PHPExcel_IOFactory::createReader('XLSX');
 		// $loadxlsx = $xlsxreader->load('xlsx/'.$this->filename.'.xlsx'); // Load file yang tadi diupload ke folder xlsx

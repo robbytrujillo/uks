@@ -67,9 +67,9 @@
 			<th>NISN</th>
 			<th>Nama</th>
 			<th width='15px'>Jenis Kelamin</th>
-			<th>Rayon</th>
-			<th>Rombel</th>
+			<th>Alamat</th>
 			<th>Kelas</th>
+			<th>Angkatan</th>
 		</tr>
 		</thead>"
 		;
@@ -96,12 +96,12 @@
 			$nis = $get[0]; // Ambil data NIS
 			$nama = $get[1]; // Ambil data nama
 			$jk = $get[2]; // Ambil data jenis kelamin
-			$rayon = $get[3]; // Ambil data alamat
-			$rombel = $get[4];
-			$kelas = $get[5];
+			$alamat = $get[3]; // Ambil data alamat
+			$kelas = $get[4];
+			$angkatan = $get[5];
 			
 			// Cek jika semua data tidak diisi
-			if(empty($nis) && empty($nama) && empty($jk) && empty($rayon) && empty($rombel) && empty($kelas))
+			if(empty($nis) && empty($nama) && empty($jk) && empty($alamat) && empty($kelas) && empty($angkatan))
 				continue; // Lewat data pada baris ini (masuk ke looping selanjutnya / baris selanjutnya)
 			
 			// Cek $numrow apakah lebih dari 1
@@ -112,12 +112,12 @@
 				$nis_td = ( ! empty($nis))? "" : " style='background: #E07171;'"; // Jika NIS kosong, beri warna merah
 				$nama_td = ( ! empty($nama))? "" : " style='background: #E07171;'"; // Jika Nama kosong, beri warna merah
 				$jk_td = ( ! empty($jk))? "" : " style='background: #E07171;'"; // Jika Jenis Kelamin kosong, beri warna merah
-				$rayon_td = ( ! empty($rayon))? "" : " style='background: #E07171;'"; // Jika Alamat kosong, beri warna merah
-				$rombel_td = ( ! empty($rombel))? "" : " style='background: #E07171;'"; // Jika Alamat kosong, beri warna merah
+				$alamat_td = ( ! empty($alamat))? "" : " style='background: #E07171;'"; // Jika Alamat kosong, beri warna merah
 				$kelas_td = ( ! empty($kelas))? "" : " style='background: #E07171;'"; // Jika Alamat kosong, beri warna merah
+				$alamat_td = ( ! empty($alamat))? "" : " style='background: #E07171;'"; // Jika Alamat kosong, beri warna merah
 				
 				// Jika salah satu data ada yang kosong
-				if(empty($nis) or empty($nama) or empty($jk) or empty($rayon) or empty($rombel) or empty($kelas)){
+				if(empty($nis) or empty($nama) or empty($jk) or empty($alamat) or empty($kelas) or empty($alamat)){
 					$kosong++; // Tambah 1 variabel $kosong
 				}
 				
@@ -125,9 +125,9 @@
 				echo "<td".$nis_td.">".$nis."</td>";
 				echo "<td".$nama_td.">".$nama."</td>";
 				echo "<td".$jk_td.">".$jk."</td>";
-				echo "<td".$rayon_td.">".$rayon."</td>";
-				echo "<td".$rombel_td.">".$rombel."</td>";
+				echo "<td".$alamat_td.">".$alamat."</td>";
 				echo "<td".$kelas_td.">".$kelas."</td>";
+				echo "<td".$alamat_td.">".$alamat."</td>";
 				echo "</tr>";
 			}
 			

@@ -26,7 +26,7 @@
 	<tbody>	
 
 	<?php
-	if( ! empty($siswa)){ // Jika data pada database tidak sama dengan empty (alias ada datanya)
+	if ( ! empty($siswa)) { // Jika data pada database tidak sama dengan empty (alias ada datanya)
 		foreach($siswa as $data){ // Lakukan looping pada variabel siswa dari controller
 			echo "<tr>";
 			echo "<td>".$data->nis."</td>";
@@ -37,7 +37,7 @@
 			echo "<td>".$data->angkatan."</td>";
 			echo "</tr>";
 		}
-	}else{ // Jika data tidak ada
+	} else { // Jika data tidak ada
 		echo "<tr><td colspan='6'><center>Data tidak ada</center></td></tr>";
 	}
 	?>

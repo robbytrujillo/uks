@@ -33,13 +33,13 @@ class Admin extends CI_Controller {
 	}
 
 	public function cari(){
-		$nis = $this->input->post('nis');
+		$nama = $this->input->post('nama');
 
-		$data['siswa'] = $this->db->get_where('tb_siswa' , ['nis' => $nis])->result();
-		$nis = $this->db->get_where('tb_siswa' , ['nis' => $nis])->row_array();
+		$data['siswa'] = $this->db->get_where('tb_siswa' , ['nama' => $nama])->result();
+		$nis = $this->db->get_where('tb_siswa' , ['nama' => $nama])->row_array();
 
 		if ($nis == null) {
-			$this->session->set_flashdata('cari', 'Siswa dengan nis tersebut tidak ada !!!');
+			$this->session->set_flashdata('cari', 'Siswa dengan nama tersebut tidak ada !!!');
 			redirect(base_url('admin/siswa'));
 		}else{
 			$this->load->view('templates/header_admin');
