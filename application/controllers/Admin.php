@@ -49,14 +49,24 @@ class Admin extends CI_Controller {
 	}
 
 	public function add($nis){
-		$get = $this->db->get_where('tb_siswa' , ['nis' => $nis])->row_array();
-		$uwa = $get['nis'];
+	date_default_timezone_set('Asia/Jakarta');	
+	
+	$get = $this->db->get_where('tb_siswa' , ['nis' => $nis])->row_array();
+	
+	// Ambil dari input datetime-local
+    $tgl_input = $this->input->post('tgl_sakit');
+
+    // Ubah format 2026-02-26T10:30 menjadi 2026-02-26 10:30:00
+    $tgl_sakit = str_replace("T", " ", $tgl_input) . ":00";
+	
+	$uwa = $get['nis'];
 		$data = [
 			'nis' => $uwa,
 			'nama' => $get['nama'],
 			'kelas' => $get['kelas'],
 			'alamat' => $get['alamat'],
-			'tgl_sakit' => date('Y-m-d'),
+			// 'tgl_sakit' => date('Y-m-d'),
+			'tgl_sakit' => $tgl_sakit, // ✅ sekarang simpan jam
 			'tekanan_darah' => $this->input->post('tekanan_darah'),
 			'suhu' => $this->input->post('suhu'),
 			'keluhan' => $this->input->post('keluhan'),
@@ -88,23 +98,43 @@ class Admin extends CI_Controller {
 	}
 
 	public function update($id){
-		$get = $this->db->get_where('tb_sakit' , ['id_sakit' => $id])->row_array();
-		$uwa = $get['nis'];
+		// $get = $this->db->get_where('tb_sakit' , ['id_sakit' => $id])->row_array();
+		// $uwa = $get['nis'];
+		// $data = [
+		// 	'nis' => $uwa,
+		// 	'tgl_sakit' => $this->input->post('tgl_sakit'),
+		// 	'tekanan_darah' => $this->input->post('tekanan_darah'),
+		// 	'suhu' => $this->input->post('suhu'),
+		// 	'keluhan' => $this->input->post('keluhan'),
+		// 	'diagnosa' => $this->input->post('diagnosa'),
+		// 	'penanganan' => $this->input->post('penanganan')
+		// ];
+		
+
+		// $where = array('id_sakit' => $id);
+		// $this->db->where($where);
+		// $this->db->update('tb_sakit' , $data);
+
+
+		// redirect(base_url('admin/siswa'));
+
+		date_default_timezone_set('Asia/Jakarta');
+
+		
+		$tgl_input = $this->input->post('tgl_sakit');
+		$tgl_sakit = str_replace("T", " ", $tgl_input) . ":00";
+
 		$data = [
-			'nis' => $uwa,
-			'tgl_sakit' => $this->input->post('tgl_sakit'),
+			'tgl_sakit' => $tgl_sakit,
 			'tekanan_darah' => $this->input->post('tekanan_darah'),
 			'suhu' => $this->input->post('suhu'),
 			'keluhan' => $this->input->post('keluhan'),
 			'diagnosa' => $this->input->post('diagnosa'),
 			'penanganan' => $this->input->post('penanganan')
 		];
-		
 
-		$where = array('id_sakit' => $id);
-		$this->db->where($where);
+		$this->db->where('id_sakit', $id);
 		$this->db->update('tb_sakit' , $data);
-
 
 		redirect(base_url('admin/siswa'));
 	}
