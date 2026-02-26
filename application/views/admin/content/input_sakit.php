@@ -68,6 +68,7 @@
                                         <th>Keluhan</th>
                                         <th>Diagnosa</th>
                                         <th>Penanganan</th>
+                                        <th>Petugas</th>
                                         <th width="15%" style="">Pengaturan Aksi</th>
                                     </tr>
                                 </thead>
@@ -93,6 +94,7 @@
                                         <th><?= $sakut->keluhan ?></th>
                                         <th><?= $sakut->diagnosa ?></th>
                                         <td><?= $sakut->penanganan ?></td>
+                                        <td><?= $sakut->nama_petugas ?></td>
                                         <td>
                                             <?= anchor(base_url('admin/edit/') . $sakut->id_sakit, '<button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>') ?>
                                             <a onclick="return confirm('Apakah Kamu Yakin ?')"

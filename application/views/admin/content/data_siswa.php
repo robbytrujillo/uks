@@ -59,7 +59,19 @@
                                     <textarea class="form-control" name="penanganan" rows="2"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button class="form-control btn btn-primary">Simpan</button>
+                                    <label>Petugas UKS</label>
+                                    <select name="id_petugas" class="form-control" required>
+                                        <option value="">-- Pilih Petugas --</option>
+                                        <?php foreach ($petugas as $p): ?>
+                                        <option value="<?= $p->id ?>">
+                                            <?= $p->nama_petugas ?> - <?= $p->jabatan ?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="form-control btn btn-primary"
+                                        style="border-radius: 30px;">Simpan</button>
                                 </div>
                                 <?php } ?>
                             </form>

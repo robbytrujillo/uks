@@ -64,13 +64,24 @@
                                     <textarea class="form-control" name="penanganan" rows="2"
                                         autofocus><?= $data->penanganan ?></textarea>
                                 </div>
+                                <div class="form-group">
+                                    <select name="id_petugas" class="form-control">
+                                        <?php foreach ($petugas as $p): ?>
+                                        <option value="<?= $p->id ?>"
+                                            <?= ($p->id == $data->id_petugas) ? 'selected' : '' ?>>
+                                            <?= $p->nama_petugas ?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <button class="btn btn-primary form-control">UPDATE</button>
+                                        <button class="btn btn-primary form-control"
+                                            style="border-radius: 30px;">UPDATE</button>
                                         <br>
                                         <br>
                                         <a href="<?= base_url('admin/siswa') ?>" class="btn-danger form-control"
-                                            style="text-decoration: none; text-align: center; margin-left: 260px; margin-top: -60px;">KEMBALI</a>
+                                            style="text-decoration: none; text-align: center; margin-left: 260px; margin-top: -60px; border-radius: 30px;">KEMBALI</a>
                                     </div>
 
                                 </div>

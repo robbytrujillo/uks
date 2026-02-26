@@ -24,8 +24,14 @@ class Admin extends CI_Controller {
 	}
 
 	public function siswa(){
-		$this->db->order_by('tgl_sakit' , 'DESC');
-		$data['sakit'] = $this->db->get('tb_sakit')->result();
+		// $this->db->order_by('tgl_sakit' , 'DESC');
+		// $data['sakit'] = $this->db->get('tb_sakit')->result();
+
+		$this->db->select('tb_sakit.*, tb_petugas.nama_petugas');
+		$this->db->from('tb_sakit');
+		$this->db->join('tb_petugas', 'tb_petugas.id = tb_sakit.id_petugas', 'left');
+		$this->db->order_by('tb_sakit.tgl_sakit', 'DESC');
+		$data['sakit'] = $this->db->get()->result();
 
 		$this->load->view('templates/header_admin');
 		$this->load->view('admin/content/input_sakit' , $data);
@@ -36,6 +42,8 @@ class Admin extends CI_Controller {
 		$nama = $this->input->post('nama');
 
 		$data['siswa'] = $this->db->get_where('tb_siswa' , ['nama' => $nama])->result();
+		$data['petugas'] = $this->db->get('tb_petugas')->result(); // ✅ TAMBAHKAN INI
+		
 		$nis = $this->db->get_where('tb_siswa' , ['nama' => $nama])->row_array();
 
 		if ($nis == null) {
@@ -72,6 +80,7 @@ class Admin extends CI_Controller {
 			'keluhan' => $this->input->post('keluhan'),
 			'diagnosa' => $this->input->post('diagnosa'),
 			'penanganan' =>$this->input->post('penanganan'),
+			'id_petugas' => $this->input->post('id_petugas') // ✅ TAMBAHKAN
 		];
 
 		$this->db->insert('tb_sakit' , $data);
@@ -90,6 +99,7 @@ class Admin extends CI_Controller {
 
 	public function edit($id){
 		$data['sakit'] = $this->db->get_where('tb_sakit' , ['id_sakit' => $id])->result();
+		$data['petugas'] = $this->db->get('tb_petugas')->result(); // ✅ TAMBAHKAN
 
 		$this->load->view('templates/header_admin');
 		$this->load->view('admin/content/edit_siswa' , $data);
@@ -130,7 +140,8 @@ class Admin extends CI_Controller {
 			'suhu' => $this->input->post('suhu'),
 			'keluhan' => $this->input->post('keluhan'),
 			'diagnosa' => $this->input->post('diagnosa'),
-			'penanganan' => $this->input->post('penanganan')
+			'penanganan' => $this->input->post('penanganan'),
+			'id_petugas' => $this->input->post('id_petugas')
 		];
 
 		$this->db->where('id_sakit', $id);
