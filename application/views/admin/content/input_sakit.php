@@ -23,50 +23,49 @@
         <div class="section-body">
 
             <!-- ================= FORM INPUT (ATAS) ================= -->
-            <!-- ================= FORM INPUT (ATAS) ================= -->
-<div class="row justify-content-center">
-    <div class="col-12 col-md-8 col-lg-6">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
 
-        <div class="card">
-            <div class="card-header">
-                <h4>Form Input</h4>
-            </div>
-
-            <div class="card-body">
-
-                <form action="<?= base_url('admin/cari') ?>" method="post">
-
-                    <div class="form-group">
-                        <label>Nama Siswa</label>
-
-                        <div class="input-group">
-
-                            <input type="text"
-                                id="nama_siswa"
-                                name="nama"
-                                class="form-control"
-                                placeholder="Ketik Nama Siswa..."
-                                maxlength="50"
-                                required
-                                autofocus>
-
-                            <div class="input-group-append">
-                                <button class="btn btn-info">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
-
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Form Input</h4>
                         </div>
 
+                        <div class="card-body">
+
+                            <form action="<?= base_url('admin/cari') ?>" method="post">
+
+                                <div class="form-group">
+                                    <label>Nama Siswa</label>
+
+                                    <div class="input-group">
+
+                                        <input type="text"
+                                            id="nama_siswa"
+                                            name="nama"
+                                            class="form-control"
+                                            placeholder="Ketik Nama Siswa..."
+                                            maxlength="50"
+                                            required
+                                            autofocus>
+
+                                        <div class="input-group-append">
+                                            <button class="btn btn-info">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                        </div>
                     </div>
 
-                </form>
-
+                </div>
             </div>
-        </div>
-
-    </div>
-</div>
 
             <!-- ================= TABEL DATA (BAWAH) ================= -->
             <div class="row mt-4">
