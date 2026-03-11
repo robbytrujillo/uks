@@ -6,109 +6,155 @@
 
         <?php if ($this->session->flashdata('flash')): ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">
-            Data <strong>berhasil</strong> <?php echo $this->session->flashdata('flash'); ?>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+            Data <strong>berhasil</strong> <?= $this->session->flashdata('flash'); ?>
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
             </button>
         </div>
         <?php elseif ($this->session->flashdata('cari')): ?>
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong><?php echo $this->session->flashdata('cari'); ?></strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+            <strong><?= $this->session->flashdata('cari'); ?></strong>
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
             </button>
         </div>
         <?php endif ?>
 
         <div class="section-body">
-            <div class="row">
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Form Input</h4>
+
+            <!-- ================= FORM INPUT (ATAS) ================= -->
+            <!-- ================= FORM INPUT (ATAS) ================= -->
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+
+        <div class="card">
+            <div class="card-header">
+                <h4>Form Input</h4>
+            </div>
+
+            <div class="card-body">
+
+                <form action="<?= base_url('admin/cari') ?>" method="post">
+
+                    <div class="form-group">
+                        <label>Nama Siswa</label>
+
+                        <div class="input-group">
+
+                            <input type="text"
+                                id="nama_siswa"
+                                name="nama"
+                                class="form-control"
+                                placeholder="Ketik Nama Siswa..."
+                                maxlength="50"
+                                required
+                                autofocus>
+
+                            <div class="input-group-append">
+                                <button class="btn btn-info">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+
                         </div>
-                        <div class="card-body">
-                            <form action="<?= base_url('admin/cari') ?>" method="post">
-                                <div class="form-group">
-                                    <label>Nama</label>
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <input type="text" name="nama" class="form-control"
-                                                placeholder="Nama : ex Asep" maxlength="50" style="float: left;"
-                                                required="" autofocus="">
-                                        </div>
-                                        <div class="col-4">
-                                            <button class="form-control btn btn-info"><i
-                                                    class="fa fa-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+
                     </div>
-                </div>
-                <div class="col-9">
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            <!-- ================= TABEL DATA (BAWAH) ================= -->
+            <div class="row mt-4">
+                <div class="col-12">
                     <div class="card">
                         <div class="card-header">
                             <h4>Data Siswa Sakit</h4>
                         </div>
                         <div class="card-body">
-                            <table id="table-1" class="table table-striped">
-                                <thead>
+                            <div class="table-responsive">
+                                <table id="table-1" class="table table-striped table-bordered">
+                                    <thead>
                                     <tr>
-                                        <th>No.</th>
-                                        <th>NISN</th>
+                                        <th>No</th>
+                                        <th>Waktu Sakit</th>
+                                        <!-- <th>Jam</th> -->
                                         <th>Nama</th>
                                         <th>Kelas</th>
-                                        <th>Alamat</th>
-                                        <th>Hari/Tanggal</th>
-                                        <th>Jam</th>
-                                        <th>TD</th>
-                                        <th>Suhu</th>
                                         <th>Keluhan</th>
                                         <th>Diagnosa</th>
-                                        <th>Penanganan</th>
-                                        <th>Petugas</th>
-                                        <th width="15%" style="">Pengaturan Aksi</th>
+                                        <th width="18%">Aksi</th>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-										$no = 1; 
-										foreach ($sakit as $sakut) { ?>
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $sakut->nis ?></td>
-                                        <td><?= $sakut->nama ?></td>
-                                        <td><?= $sakut->kelas ?></td>
-                                        <td><?= $sakut->alamat ?></td>
-                                        <!-- <td><?= $sakut->tgl_sakit  ?></td> -->
-                                        <td>
-                                            <?= date('l, d-m-Y', strtotime($sakut->tgl_sakit)); ?>
-                                        </td>
-                                        <td>
-                                            <?= date('H:i', strtotime($sakut->tgl_sakit)); ?>
-                                        </td>
-                                        <th><?= $sakut->tekanan_darah ?></th>
-                                        <th><?= $sakut->suhu ?></th>
-                                        <th><?= $sakut->keluhan ?></th>
-                                        <th><?= $sakut->diagnosa ?></th>
-                                        <td><?= $sakut->penanganan ?></td>
-                                        <td><?= $sakut->nama_petugas ?></td>
-                                        <td>
-                                            <?= anchor(base_url('admin/edit/') . $sakut->id_sakit, '<button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button>') ?>
-                                            <a onclick="return confirm('Apakah Kamu Yakin ?')"
+                                    </thead>
+                                    <tbody>
+                                        <?php $no = 1; ?>
+                                        <?php foreach ($sakit as $sakut): ?>
+                                        <tr>
+
+                                            <td><?= $no++ ?></td>
+
+                                            <!-- <td>
+                                                <?= date('l, d-m-Y', strtotime($sakut->tgl_sakit)); ?>
+                                            </td>
+
+                                            <td>
+                                                <?= date('H:i', strtotime($sakut->tgl_sakit)); ?>
+                                            </td> -->
+
+                                            <td>
+                                                <?= hari_indo($sakut->tgl_sakit) ?>,
+                                                <?= date('d', strtotime($sakut->tgl_sakit)) ?>
+                                                <?= bulan_indo(date('m', strtotime($sakut->tgl_sakit))) ?>
+                                                <?= date('Y', strtotime($sakut->tgl_sakit)) ?><br>
+                                                Pukul : <span style="color: red; font-weight: bold"><?= date('H:i', strtotime($sakut->tgl_sakit)) ?></span> WIB
+                                            </td>
+
+                                            <td><?= $sakut->nama ?></td>
+
+                                            <td><?= $sakut->kelas ?></td>
+
+                                            <td><?= $sakut->keluhan ?></td>
+
+                                            <td><?= $sakut->diagnosa ?></td>
+
+                                            <td>
+
+                                                <!-- DETAIL -->
+                                                <a href="<?= base_url('admin/detail/'.$sakut->id_sakit) ?>"
+                                                class="btn btn-sm btn-info">
+                                                <i class="fa fa-eye"></i>
+                                                </a>
+
+                                                <!-- UPDATE -->
+                                                <a href="<?= base_url('admin/edit/'.$sakut->id_sakit) ?>"
+                                                class="btn btn-sm btn-primary">
+                                                <i class="fa fa-edit"></i>
+                                                </a>
+
+                                                <!-- DELETE -->
+                                                <a onclick="return confirm('Apakah Kamu Yakin ?')"
                                                 href="<?= site_url('admin/delete/'.$sakut->id_sakit)?>"
-                                                class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                                class="btn btn-sm btn-danger">
+                                                <i class="fa fa-trash"></i>
+                                                </a>
+
+                                            </td>
+
+                                        </tr>
+                                        <?php endforeach ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- ===================================================== -->
+
         </div>
     </section>
 </div>

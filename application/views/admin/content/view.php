@@ -1,34 +1,39 @@
 <div class="container-fluid">
-<div class="main-content">
-	<div class="section">
-		<div class="section-header">
-<body>
-	
-	<h1>Data Siswa</h1>
+    <div class="main-content">
+        <div class="section">
+            <div class="section-header">
 
-		</div>
-	<div class="section-body">
-		<a href="<?php echo base_url("index.php/Siswa/form"); ?>" class="btn btn-primary ml-2">Import Data</a>
-		<br>	
-		<br>
+                <body>
 
-	<table id="table-1" class="table table-striped table-hovered table-bordered">
-	<thead>	
-			<tr>
-				<th>NISN</th>
-				<th>Nama</th>
-				<th>Jenis Kelamin</th>
-				<th>Alamat</th>
-				<th>Kelas</th>
-				<th>Angkatan</th>
-			</tr>
-	</thead>
-	<tbody>	
+                    <h1>Data Siswa</h1>
 
-	<?php
+            </div>
+            <div class="section-body">
+                <a href="<?php echo base_url("index.php/Siswa/form"); ?>" class="btn btn-primary ml-2"
+                    style="border-radius: 30px">Import Data</a>
+                <br>
+                <br>
+
+                <table id="table-1" class="table table-striped table-hovered table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>NISN</th>
+                            <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Alamat</th>
+                            <th>Kelas</th>
+                            <th>Angkatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php
+	$i = 1;
 	if ( ! empty($siswa)) { // Jika data pada database tidak sama dengan empty (alias ada datanya)
 		foreach($siswa as $data){ // Lakukan looping pada variabel siswa dari controller
 			echo "<tr>";
+			echo "<td>".$i++."</td>";
 			echo "<td>".$data->nis."</td>";
 			echo "<td>".$data->nama."</td>";
 			echo "<td>".$data->jk."</td>";
@@ -41,10 +46,10 @@
 		echo "<tr><td colspan='6'><center>Data tidak ada</center></td></tr>";
 	}
 	?>
-	</tbody>
-	</table>
-</body>
-		</div>
-	</div>
-</div>
+                    </tbody>
+                </table>
+                </body>
+            </div>
+        </div>
+    </div>
 </div>

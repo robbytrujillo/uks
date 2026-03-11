@@ -19,6 +19,11 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?= base_url() ?>/dist/css/style.css">
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>dist/dist/sweetalert.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  
 </head>
 
 <body class="layout-3">

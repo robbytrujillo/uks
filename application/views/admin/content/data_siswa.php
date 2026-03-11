@@ -1,11 +1,11 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h4>Data Siswa</h4>
+            <h4 class="text-center w-100">Data Siswa</h4>
         </div>
         <div class="section-body">
-            <div class="row">
-                <div class="col-6">
+            <div class="row justify-content-center">
+                <div class="col-6col-12 col-md-8 col-lg-6">
                     <div class="card">
                         <div class="card-header">
                             <h4>Simpan Data</h4>

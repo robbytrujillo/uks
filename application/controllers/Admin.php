@@ -88,6 +88,20 @@ class Admin extends CI_Controller {
 		redirect(base_url('admin/siswa'));
 	}
 
+	public function detail($id)
+	{
+		$this->db->select('tb_sakit.*, tb_petugas.nama_petugas');
+		$this->db->from('tb_sakit');
+		$this->db->join('tb_petugas', 'tb_petugas.id = tb_sakit.id_petugas', 'left');
+		$this->db->where('tb_sakit.id_sakit', $id);
+
+		$data['detail'] = $this->db->get()->row();
+
+		$this->load->view('templates/header_admin');
+		$this->load->view('admin/content/detail_sakit', $data);
+		$this->load->view('templates/footer_admin');
+	}
+
 	public function delete($id){
 		$where = ['id_sakit' => $id];
 		$this->db->where($where);
@@ -150,6 +164,26 @@ class Admin extends CI_Controller {
 		redirect(base_url('admin/siswa'));
 	}
 
+	public function get_siswa()
+	{
+		$keyword = $this->input->get('term');
+
+		$this->db->like('nama', $keyword);
+		$data = $this->db->get('tb_siswa')->result();
+
+		$result = [];
+
+		foreach ($data as $row)
+		{
+			$result[] = [
+				'label' => $row->nama . ' - ' . $row->kelas,
+				'value' => $row->nama
+			];
+		}
+
+		echo json_encode($result);
+	}
+
 	public function report(){
 		$report['data'] = $this->db->get('tb_sakit')->result();
 
@@ -158,59 +192,58 @@ class Admin extends CI_Controller {
 		$this->load->view('templates/footer_admin');
 	}
 
-	public function laporan($date){
+	public function laporan(){
 		$date = date('Y-m-d');
-		$where = array('tgl_sakit' => $date);
-		$laporan['data'] = $this->db->get_where('tb_sakit' , ['tgl_sakit' => $date])->result();
+
+		$laporan['data'] = $this->db->select('tb_sakit.*, tb_petugas.nama_petugas')
+			->from('tb_sakit')
+			->join('tb_petugas', 'tb_sakit.id_petugas = tb_petugas.id', 'left')
+			->where('DATE(tb_sakit.tgl_sakit)', $date)
+			->order_by('tb_sakit.tgl_sakit', 'DESC')
+			->get()
+			->result();
 
 		$this->load->view('templates/header_laporan');
-		$this->load->view('admin/content/laporan' , $laporan);
+		$this->load->view('admin/content/laporan', $laporan);
 		$this->load->view('templates/footer_admin');
 	}
 
 	public function laporanbulanan(){
-		$bulan = $this->input->post('bulan');
+    $bulan = $this->input->post('bulan');
 
-		$this->db->select('*');
-		$this->db->from('tb_sakit');
-		$this->db->where('MONTH(tgl_sakit)' , $bulan);
-		$laporan['data'] = $this->db->get()->result();
+    if ($bulan == null) {
+        redirect(base_url('admin/report'));
+    }
 
-		if ($bulan == null) {
-			redirect(base_url('admin/report'));
-		}else{
-			if ($bulan == '01') {
-			$laporan['bulan'] = 'Januari';
-			}elseif ($bulan == '02') {
-				$laporan['bulan'] = 'Februari';
-			}elseif ($bulan == '03') {
-				$laporan['bulan'] = 'Maret';
-			}elseif ($bulan == '04') {
-				$laporan['bulan'] = 'April';
-			}elseif ($bulan == '05') {
-				$laporan['bulan'] = 'Mei';
-			}elseif ($bulan == '06') {
-				$laporan['bulan'] = 'Juni';
-			}elseif ($bulan == '07') {
-				$laporan['bulan'] = 'Juli';
-			}elseif ($bulan == '08') {
-				$laporan['bulan'] = 'Agustus';
-			}elseif ($bulan == '09') {
-				$laporan['bulan'] = 'September';
-			}elseif ($bulan == '10') {
-				$laporan['bulan'] = 'Oktober';
-			}elseif ($bulan == '11') {
-				$laporan['bulan'] = 'November';
-			}elseif ($bulan == '12') {
-				$laporan['bulan'] = 'Desember';
-			}
+    $laporan['data'] = $this->db->select('tb_sakit.*, tb_petugas.nama_petugas')
+        ->from('tb_sakit')
+        ->join('tb_petugas', 'tb_sakit.id_petugas = tb_petugas.id', 'left')
+        ->where('MONTH(tb_sakit.tgl_sakit)', $bulan)
+        ->order_by('tb_sakit.tgl_sakit', 'DESC')
+        ->get()
+        ->result();
 
-			$this->load->view('templates/header_laporan');
-			$this->load->view('admin/content/laporanbulanan' , $laporan);
-			$this->load->view('templates/footer_admin');
-		}
-		
-	}
+    $nama_bulan = [
+        '01' => 'Januari',
+        '02' => 'Februari',
+        '03' => 'Maret',
+        '04' => 'April',
+        '05' => 'Mei',
+        '06' => 'Juni',
+        '07' => 'Juli',
+        '08' => 'Agustus',
+        '09' => 'September',
+        '10' => 'Oktober',
+        '11' => 'November',
+        '12' => 'Desember'
+    ];
+
+    $laporan['bulan'] = $nama_bulan[$bulan];
+
+    $this->load->view('templates/header_laporan');
+    $this->load->view('admin/content/laporanbulanan', $laporan);
+    $this->load->view('templates/footer_admin');
+}
 
 }
 
