@@ -63,8 +63,9 @@
 
 
         <div class="text-right">
-            <button class="print btn btn-primary" onclick="window.print()">CETAK</button>
-            <a class="print btn btn-danger" href="<?= base_url('admin/report') ?>">KEMBALI</a>
+            <button class="print btn btn-primary" style="border-radius: 30px;" onclick="window.print()">CETAK</button>
+            <a class="print btn btn-danger" style="border-radius: 30px;"
+                href="<?= base_url('admin/report') ?>">KEMBALI</a>
         </div>
 
 

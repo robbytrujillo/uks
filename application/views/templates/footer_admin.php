@@ -1,27 +1,36 @@
-
+<footer class="footer-full text-center">
+    <div class="small">
+        Copyright &copy; <?php echo date('Y'); ?>
+        <a href="https://robbyilham.com/" target="_blank">by</a>
+        IT Development IHBS
+    </div>
+</footer>
 
 <script src="<?= base_url() ?>/dist/modules/jquery.min.js"></script>
-  <script src="<?= base_url() ?>/dist/modules/popper.js"></script>
-  <script src="<?= base_url() ?>/dist/modules/tooltip.js"></script>
-  <script src="<?= base_url() ?>/dist/modules/bootstrap/js/bootstrap.min.js"></script>
-  <script src="<?= base_url() ?>/dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="<?= base_url() ?>/dist/modules/moment.min.js"></script>
-  <script src="<?= base_url() ?>/dist/js/stisla.js"></script>
-  
-  <!-- JS Libraies -->
-  <script src="<?= base_url()  ?>/dist/modules/datatables/datatables.min.js"></script>
-  <script src="<?= base_url()  ?>/dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script src="<?= base_url()  ?>/dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
-  <script src="<?= base_url()  ?>/dist/modules/jquery-ui/jquery-ui.min.js"></script>
+<script src="<?= base_url() ?>/dist/modules/popper.js"></script>
+<script src="<?= base_url() ?>/dist/modules/tooltip.js"></script>
+<script src="<?= base_url() ?>/dist/modules/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?= base_url() ?>/dist/modules/nicescroll/jquery.nicescroll.min.js"></script>
+<script src="<?= base_url() ?>/dist/modules/moment.min.js"></script>
+<script src="<?= base_url() ?>/dist/js/stisla.js"></script>
 
-  <!-- Page Specific JS File -->
-  <script src="<?= base_url()  ?>/dist/js/page/modules-datatables.js"></script>
-  
-  <!-- Template JS File -->
-  <script src="<?= base_url() ?>/dist/js/scripts.js"></script>
-  <script src="<?= base_url() ?>/dist/js/custom.js"></script>
+<!-- JS Libraies -->
+<script src="<?= base_url()  ?>/dist/modules/datatables/datatables.min.js"></script>
+<script src="<?= base_url()  ?>/dist/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url()  ?>/dist/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+<script src="<?= base_url()  ?>/dist/modules/jquery-ui/jquery-ui.min.js"></script>
 
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<!-- Page Specific JS File -->
+<script src="<?= base_url()  ?>/dist/js/page/modules-datatables.js"></script>
+
+<!-- Template JS File -->
+<script src="<?= base_url() ?>/dist/js/scripts.js"></script>
+<script src="<?= base_url() ?>/dist/js/custom.js"></script>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+<!--<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>-->
+<!--<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>-->
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -41,22 +50,14 @@
 
 <script>
 $(function(){
-
-$("#nama_siswa").autocomplete({
-
-    source: "<?= base_url('admin/get_siswa') ?>",
-    minLength: 2,
-
-    select: function(event, ui){
-
-        $("#nama_siswa").val(ui.item.value);
-
-        $("form").submit(); // otomatis submit ke admin/cari
-
-    }
-
-});
-
+    $("#nama_siswa").autocomplete({
+        source: "<?= base_url('admin/get_siswa') ?>",
+        minLength: 2,
+        select: function(event, ui){
+            $("#nama_siswa").val(ui.item.value);
+            $("form").submit(); // otomatis submit ke admin/cari
+        }
+    });
 });
 </script>
 

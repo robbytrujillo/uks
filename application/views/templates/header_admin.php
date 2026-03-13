@@ -24,6 +24,81 @@
 
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   
+  <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css">-->
+  
+  <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+        }
+
+        p,
+        a,
+        input,
+        strong,
+        tr,
+        th,
+        td,
+        button,
+        div {
+            font-family: 'Poppins', sans-serif;
+        }
+    
+      .dataTables_wrapper .dataTables_paginate {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            margin: 2px;
+        }
+        
+        .table-responsive{
+            overflow-x:auto;
+        }
+        
+        .dataTables_wrapper .dataTables_paginate{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+        
+        .dataTables_wrapper{
+            margin-bottom:40px;
+        }
+
+        @media (max-width: 576px) {
+        
+            .dataTables_wrapper .dataTables_paginate {
+                font-size: 12px;
+            }
+        
+            .dataTables_wrapper .dataTables_info {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        
+        }
+        
+        .footer-full{
+            width:100%;
+            background:#f8f9fa;
+            padding:15px;
+            position:relative;
+            left:0;
+        }
+  </style>
+  
 </head>
 
 <body class="layout-3">

@@ -1,7 +1,7 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h4>Siswa Sakit</h4>
+            <h4>Laporan Siswa Sakit</h4>
         </div>
         <div class="section-body">
             <div class="row">
@@ -11,33 +11,35 @@
                             <h4>Data Siswa Sakit</h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped" id="table-2">
-                                <thead>
-                                    <tr>
-                                        <th>Tanggal</th>
-                                        <th>NISN</th>
-                                        <th>Nama</th>
-                                        <th>Kelas</th>
-                                        <th>Alamat</th>
-                                        <th>Diagnosa</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php 
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-2">
+                                    <thead>
+                                        <tr>
+                                            <th>Tanggal</th>
+                                            <th>NISN</th>
+                                            <th>Nama</th>
+                                            <th>Kelas</th>
+                                            <th>Alamat</th>
+                                            <th>Diagnosa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php 
 										foreach ($data as $value) {
 									 ?>
-                                    <tr>
-                                        <td><?= $value->tgl_sakit ?></td>
-                                        <td><?= $value->nis ?></td>
-                                        <td><?= $value->nama ?></td>
-                                        <td><?= $value->kelas ?></td>
-                                        <td><?= $value->alamat ?></td>
-                                        <td><?= $value->diagnosa ?></td>
-                                    </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                            <div class="col-4">
+                                        <tr>
+                                            <td><?= $value->tgl_sakit ?></td>
+                                            <td><?= $value->nis ?></td>
+                                            <td><?= $value->nama ?></td>
+                                            <td><?= $value->kelas ?></td>
+                                            <td><?= $value->alamat ?></td>
+                                            <td><?= $value->diagnosa ?></td>
+                                        </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-4 mt-3">
                                 <div class="text-left">
                                     <?= anchor(base_url('admin/laporan/') . date('Y-m-d') , '<button class="btn btn-primary" style="border-radius: 30px;"><i class="fa fa-print">&nbsp;Cetak Laporan Harian</i></button>')?>
                                 </div>
