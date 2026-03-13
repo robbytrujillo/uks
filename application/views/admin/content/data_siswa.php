@@ -69,9 +69,19 @@
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <button class="form-control btn btn-primary"
-                                        style="border-radius: 30px;">Simpan</button>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button class="btn btn-primary btn-block" style="border-radius:30px;">
+                                            SIMPAN
+                                        </button>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <a href="<?= base_url('admin/siswa') ?>" class="btn btn-danger btn-block"
+                                            style="border-radius:30px;">
+                                            KEMBALI
+                                        </a>
+                                    </div>
                                 </div>
                                 <?php } ?>
                             </form>
@@ -82,6 +92,6 @@
         </div>
     </section>
 
-    
+
 
 </div>

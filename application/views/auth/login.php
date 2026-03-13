@@ -56,6 +56,10 @@
 
 
                         </div>
+                        <div class="card-footer text-center py-3">
+                            <div class="small">Copyright &copy; <?php echo date('Y'); ?> <a
+                                    href="https://robbyilham.com/" target="_blank">by</a> IT Development IHBS </div>
+                        </div>
                     </div>
                 </div>
             </div>
