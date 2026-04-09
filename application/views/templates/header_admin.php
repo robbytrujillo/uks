@@ -104,6 +104,7 @@
 <body class="layout-3">
   <div id="app">
     <div class="main-wrapper container">
+    
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
         <div class="container">

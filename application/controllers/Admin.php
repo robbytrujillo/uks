@@ -10,6 +10,15 @@ class Admin extends CI_Controller {
 		if($this->session->userdata('status') != 'login') {
 			redirect(base_url());
 		}
+
+		$this->role = $this->session->userdata('role');
+	}
+
+	private function cek_superadmin()
+	{
+		if ($this->session->userdata('role') != 'superadmin') {
+			show_error('Akses ditolak! Hanya Superadmin yang boleh melakukan aksi ini.');
+		}
 	}
 
 	public function index()
@@ -103,9 +112,12 @@ class Admin extends CI_Controller {
 	}
 
 	public function delete($id){
+		$this->cek_superadmin();	
+
 		$where = ['id_sakit' => $id];
 		$this->db->where($where);
 		$this->db->delete('tb_sakit');
+		
 		$this->session->set_flashdata('flash', 'Dihapus');
 
 		redirect(base_url('admin/siswa'));
@@ -141,6 +153,7 @@ class Admin extends CI_Controller {
 
 
 		// redirect(base_url('admin/siswa'));
+		$this->cek_superadmin();
 
 		date_default_timezone_set('Asia/Jakarta');
 
@@ -209,6 +222,8 @@ class Admin extends CI_Controller {
 	}
 
 	public function laporanbulanan(){
+	$this->cek_superadmin();
+
     $bulan = $this->input->post('bulan');
 
     if ($bulan == null) {

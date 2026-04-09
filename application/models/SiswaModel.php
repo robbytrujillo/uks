@@ -46,4 +46,26 @@ class SiswaModel extends CI_Model {
         return false;
     }
 
+    // Insert 1 data
+    public function insert($data){
+        return $this->db->insert('tb_siswa', $data);
+    }
+
+    // Ambil 1 data by NIS
+    public function getById($nis){
+        return $this->db->get_where('tb_siswa', ['nis' => $nis])->row();
+    }
+
+    // Update data
+    public function update($nis, $data){
+        $this->db->where('nis', $nis);
+        return $this->db->update('tb_siswa', $data);
+    }
+
+    // Delete data
+    public function delete($nis){
+        $this->db->where('nis', $nis);
+        return $this->db->delete('tb_siswa');
+    }
+
 }

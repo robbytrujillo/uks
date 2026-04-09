@@ -6,13 +6,17 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class Siswa extends CI_Controller {
 
-    private $filename = "import_data";
-
     public function __construct(){
         parent::__construct();
         $this->load->model('SiswaModel');
+
+        // proteksi login
+        if($this->session->userdata('status') != 'login'){
+            redirect(base_url());
+        }
     }
 
+    // ================= LIST DATA =================
     public function index(){
         $data['siswa'] = $this->SiswaModel->view();
 
@@ -21,207 +25,119 @@ class Siswa extends CI_Controller {
         $this->load->view('templates/footer_admin');
     }
 
-    public function form(){
-
-        $data = array();
-
-        if(isset($_POST['preview'])){
-
-            $upload = $this->SiswaModel->upload_file($this->filename);
-
-            if($upload['result'] == "success"){
-
-                // Load PHPExcel
-                include APPPATH.'third_party/PHPExcel/PHPExcel.php';
-
-                $csvreader = PHPExcel_IOFactory::createReader('CSV');
-
-                // Supaya delimiter aman
-                $csvreader->setDelimiter(',');
-                $csvreader->setEnclosure('"');
-                $csvreader->setSheetIndex(0);
-
-                // Gunakan path absolut
-                $loadcsv = $csvreader->load(FCPATH.'csv/'.$this->filename.'.csv');
-
-                $sheet = $loadcsv->getActiveSheet()->getRowIterator();
-
-                $data['sheet'] = $sheet;
-
-            }else{
-
-                $data['upload_error'] = $upload['error'];
-
-            }
-        }
-
+    // ================= FORM TAMBAH =================
+    public function tambah(){
         $this->load->view('templates/header_admin');
-        $this->load->view('admin/content/form', $data);
+        $this->load->view('admin/content/tambah_siswa');
         $this->load->view('templates/footer_admin');
     }
 
-    // public function import(){
+    // ================= SIMPAN =================
+    public function store(){
 
-    //     include APPPATH.'third_party/PHPExcel/PHPExcel.php';
-
-    //     $csvreader = PHPExcel_IOFactory::createReader('CSV');
-
-    //     $csvreader->setDelimiter(',');
-    //     $csvreader->setEnclosure('"');
-    //     $csvreader->setSheetIndex(0);
-
-    //     $loadcsv = $csvreader->load(FCPATH.'csv/'.$this->filename.'.csv');
-
-    //     $sheet = $loadcsv->getActiveSheet()->getRowIterator();
-
-    //     $data = array();
-
-    //     $numrow = 1;
-
-    //     foreach($sheet as $row){
-
-    //         if($numrow > 1){
-
-    //             $cellIterator = $row->getCellIterator();
-    //             $cellIterator->setIterateOnlyExistingCells(false);
-
-    //             $get = array();
-
-    //             foreach ($cellIterator as $cell) {
-    //                 $get[] = $cell->getValue();
-    //             }
-
-    //             $nis      = isset($get[0]) ? $get[0] : "";
-    //             $nama     = isset($get[1]) ? $get[1] : "";
-    //             $jk       = isset($get[2]) ? $get[2] : "";
-    //             $alamat   = isset($get[3]) ? $get[3] : "";
-    //             $kelas    = isset($get[4]) ? $get[4] : "";
-    //             $angkatan = isset($get[5]) ? $get[5] : "";
-
-    //             // Validasi minimal data
-    //             if($nis != "" && $nama != ""){
-
-    //                 $data[] = array(
-    //                     'nis' => $nis,
-    //                     'nama' => $nama,
-    //                     'jk' => $jk,
-    //                     'alamat' => $alamat,
-    //                     'kelas' => $kelas,
-    //                     'angkatan' => $angkatan
-    //                 );
-
-    //             }
-    //         }
-
-    //         $numrow++;
-    //     }
-
-    //     // Insert ke database
-    //     if(!empty($data)){
-    //         $this->SiswaModel->insert_multiple($data);
-    //     }
-
-    //     redirect("Siswa");
-
-    // }
-
-	public function import()
-	{
-		$file = $_FILES['file']['tmp_name'];
-
-		if (($handle = fopen($file, "r")) !== FALSE) {
-
-			$data = [];
-			$no = 0;
-
-			while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
-
-				if ($no > 0) { // skip header
-
-					$data[] = [
-						'nis' => $row[0],
-						'nama' => $row[1],
-						'jk' => $row[2],
-						'alamat' => $row[3],
-						'kelas' => $row[4],
-						'angkatan' => $row[5]
-					];
-				}
-
-				$no++;
-			}
-
-			fclose($handle);
-
-			$this->SiswaModel->insert_multiple($data);
-		}
-
-		redirect('Siswa');
-	}
-
-	// public function import_excel()
-	// {
-	// 	include APPPATH.'third_party/vendor/autoload.php';
-
-	// 	$file = $_FILES['file']['tmp_name'];
-
-	// 	$spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($file);
-
-	// 	$sheet = $spreadsheet->getActiveSheet()->toArray();
-
-	// 	$data = [];
-
-	// 	$numrow = 1;
-
-	// 	foreach($sheet as $row){
-
-	// 		if($numrow > 1){ // skip header
-
-	// 			$data[] = [
-	// 				'nis' => $row[0],
-	// 				'nama' => $row[1],
-	// 				'jk' => $row[2],
-	// 				'alamat' => $row[3],
-	// 				'kelas' => $row[4],
-	// 				'angkatan' => $row[5]
-	// 			];
-
-	// 		}
-
-	// 		$numrow++;
-
-	// 	}
-
-	// 	$this->SiswaModel->insert_multiple($data);
-
-	// 	redirect('Siswa');
-	// }
-
-	public function import_excel()
-{
-    $file = $_FILES['file']['tmp_name'];
-
-    $spreadsheet = IOFactory::load($file);
-    $sheet = $spreadsheet->getActiveSheet()->toArray();
-
-    $data = [];
-
-    foreach ($sheet as $key => $row) {
-
-        if ($key == 0) continue; // skip header
-
-        $data[] = [
-            'nis' => $row[0],
-            'nama' => $row[1],
-            'jk' => $row[2],
-            'alamat' => $row[3],
-            'kelas' => $row[4],
-            'angkatan' => $row[5]
+        $data = [
+            'nis' => $this->input->post('nis'),
+            'nama' => $this->input->post('nama'),
+            'jk' => $this->input->post('jk'),
+            'alamat' => $this->input->post('alamat'),
+            'kelas' => $this->input->post('kelas'),
+            'angkatan' => $this->input->post('angkatan'),
         ];
+
+        $this->SiswaModel->insert($data);
+
+        redirect('Siswa');
     }
 
-    $this->SiswaModel->insert_multiple($data);
+    // ================= EDIT =================
+    public function edit($nis){
+        $data['siswa'] = $this->SiswaModel->getById($nis);
 
-    redirect('Siswa');
-}
+        $this->load->view('templates/header_admin');
+        $this->load->view('admin/content/ubah_siswa', $data);
+        $this->load->view('templates/footer_admin');
+    }
+
+    // ================= UPDATE =================
+    public function update(){
+
+        $nis = $this->input->post('nis');
+
+        $data = [
+            'nama' => $this->input->post('nama'),
+            'jk' => $this->input->post('jk'),
+            'alamat' => $this->input->post('alamat'),
+            'kelas' => $this->input->post('kelas'),
+            'angkatan' => $this->input->post('angkatan')
+        ];
+
+        $this->SiswaModel->update($nis, $data);
+
+        redirect('Siswa');
+    }
+
+    // ================= DELETE =================
+    public function delete($nis){
+        $this->SiswaModel->delete($nis);
+        redirect('Siswa');
+    }
+
+    // ================= IMPORT CSV =================
+    public function import(){
+        $file = $_FILES['file']['tmp_name'];
+
+        if (($handle = fopen($file, "r")) !== FALSE) {
+
+            $data = [];
+            $no = 0;
+
+            while (($row = fgetcsv($handle, 1000, ",")) !== FALSE) {
+
+                if ($no > 0) {
+                    $data[] = [
+                        'nis' => $row[0],
+                        'nama' => $row[1],
+                        'jk' => $row[2],
+                        'alamat' => $row[3],
+                        'kelas' => $row[4],
+                        'angkatan' => $row[5]
+                    ];
+                }
+
+                $no++;
+            }
+
+            fclose($handle);
+            $this->SiswaModel->insert_multiple($data);
+        }
+
+        redirect('Siswa');
+    }
+
+    // ================= IMPORT EXCEL =================
+    public function import_excel(){
+
+        $file = $_FILES['file']['tmp_name'];
+        $spreadsheet = IOFactory::load($file);
+        $sheet = $spreadsheet->getActiveSheet()->toArray();
+
+        $data = [];
+
+        foreach ($sheet as $key => $row) {
+            if ($key == 0) continue;
+
+            $data[] = [
+                'nis' => $row[0],
+                'nama' => $row[1],
+                'jk' => $row[2],
+                'alamat' => $row[3],
+                'kelas' => $row[4],
+                'angkatan' => $row[5]
+            ];
+        }
+
+        $this->SiswaModel->insert_multiple($data);
+
+        redirect('Siswa');
+    }
 }
