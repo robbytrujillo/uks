@@ -10,26 +10,111 @@ class Admin extends CI_Controller {
 		if($this->session->userdata('status') != 'login') {
 			redirect(base_url());
 		}
-
-		$this->role = $this->session->userdata('role');
-	}
-
-	private function cek_superadmin()
-	{
-		if ($this->session->userdata('role') != 'superadmin') {
-			show_error('Akses ditolak! Hanya Superadmin yang boleh melakukan aksi ini.');
-		}
 	}
 
 	public function index()
 	{
-		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `kelas`, `alamat`, `tgl_sakit`, `tekanan_darah`, `suhu`, `keluhan`, `diagnosa`, `penanganan` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
-			')->result();
-         
-		
-		$this->load->view('templates/header_admin');
-		$this->load->view('admin/admin', $data);
-		$this->load->view('templates/footer_admin');
+// 		$data['sakit'] = $this->db->query('SELECT COUNT(nama) AS data, `id_sakit`, `nis`, `nama`, `kelas`, `alamat`, `tgl_sakit`, `tekanan_darah`, `suhu`, `keluhan`, `diagnosa`, `penanganan` FROM `tb_sakit` GROUP BY nama ORDER BY COUNT(nama) DESC
+// 			')->result();
+
+    $this->load->library('pagination');
+
+    $limit = 5;
+
+    // offset aman dari null
+    $start = $this->uri->segment(3);
+    $start = ($start !== null && is_numeric($start)) ? (int)$start : 0;
+    $data['start'] = $start;
+
+    /*
+    =========================
+    HITUNG TOTAL DATA
+    =========================
+    */
+    $total_rows = $this->db->query("
+        SELECT COUNT(*) as total FROM (
+            SELECT nama
+            FROM tb_sakit
+            GROUP BY nama
+        ) as hasil
+    ")->row()->total;
+
+    /*
+    =========================
+    CONFIG PAGINATION
+    =========================
+    */
+    $config['base_url'] = base_url('admin/index/');
+    $config['total_rows'] = $total_rows;
+    $config['per_page'] = $limit;
+    $config['uri_segment'] = 3;
+    $config['use_page_numbers'] = FALSE;
+
+    // Bootstrap style
+    $config['full_tag_open'] = '<nav><ul class="pagination justify-content-center mt-4">';
+    $config['full_tag_close'] = '</ul></nav>';
+
+    $config['first_link'] = false;
+    $config['last_link'] = false;
+
+    $config['prev_link'] = '&laquo;';
+    $config['next_link'] = '&raquo;';
+
+    $config['prev_tag_open'] = '<li class="page-item">';
+    $config['prev_tag_close'] = '</li>';
+
+    $config['next_tag_open'] = '<li class="page-item">';
+    $config['next_tag_close'] = '</li>';
+
+    $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link">';
+    $config['cur_tag_close'] = '</a></li>';
+
+    $config['num_tag_open'] = '<li class="page-item">';
+    $config['num_tag_close'] = '</li>';
+
+    $config['attributes'] = array('class' => 'page-link');
+
+    $this->pagination->initialize($config);
+
+    /*
+    =========================
+    QUERY DATA PAGINATION
+    =========================
+    */
+    $data['sakit'] = $this->db->query("
+        SELECT 
+            COUNT(nama) AS data,
+            id_sakit,
+            nis,
+            nama,
+            kelas,
+            alamat,
+            tgl_sakit,
+            tekanan_darah,
+            suhu,
+            keluhan,
+            diagnosa,
+            penanganan
+        FROM tb_sakit
+        GROUP BY nama
+        ORDER BY COUNT(nama) DESC
+        LIMIT {$start}, {$limit}
+    ")->result();
+
+    $data['pagination'] = $this->pagination->create_links();
+
+    /*
+    =========================
+    LOAD VIEW
+    =========================
+    */
+
+        
+
+    $this->load->view('templates/header_admin');
+    $this->load->view('admin/admin', $data);
+    $this->load->view('templates/footer_admin');
+
 	}
 
 	public function siswa(){
@@ -112,12 +197,9 @@ class Admin extends CI_Controller {
 	}
 
 	public function delete($id){
-		$this->cek_superadmin();	
-
 		$where = ['id_sakit' => $id];
 		$this->db->where($where);
 		$this->db->delete('tb_sakit');
-		
 		$this->session->set_flashdata('flash', 'Dihapus');
 
 		redirect(base_url('admin/siswa'));
@@ -153,7 +235,6 @@ class Admin extends CI_Controller {
 
 
 		// redirect(base_url('admin/siswa'));
-		$this->cek_superadmin();
 
 		date_default_timezone_set('Asia/Jakarta');
 
@@ -222,8 +303,6 @@ class Admin extends CI_Controller {
 	}
 
 	public function laporanbulanan(){
-	$this->cek_superadmin();
-
     $bulan = $this->input->post('bulan');
 
     if ($bulan == null) {
