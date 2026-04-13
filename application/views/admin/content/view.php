@@ -14,8 +14,8 @@
                 <br>
                 <br>
 
-                <a href="<?= base_url('Siswa/tambah') ?>" class="btn btn-success mb-3">
-                    + Tambah Siswa
+                <a href="<?= base_url('Siswa/tambah') ?>" class="btn btn-success mb-3" style="border-radius: 30px;">
+                    Tambah Siswa
                 </a>
 
                 <div class="table-responsive mb-5">
@@ -47,8 +47,9 @@
                                         echo "<td>".$data->kelas."</td>";
                                         echo "<td>".$data->angkatan."</td>";
                                         echo "<td>
-                                                <a href='".base_url("Siswa/edit/".$data->nis)."' class='btn btn-warning btn-sm'>Edit</a>
-                                                <a href='".base_url("Siswa/delete/".$data->nis)."' class='btn btn-danger btn-sm' onclick='return confirm(\"Yakin?\")'>Delete</a>
+                                                <a href='".base_url("Siswa/edit/".$data->nis)."' class='btn btn-warning btn-sm' style='border-radius: 30px;'><i class='fa fa-edit'></i></a>
+                                                <a href='".base_url("Siswa/delete/".$data->nis)."' class='btn btn-danger btn-sm' style='border-radius: 30px;' <a onclick='return confirm('Apakah Kamu Yakin ?')'><i class='fa fa-trash'></i></a>
+
                                             </td>";
                                         echo "</tr>";
                                     }

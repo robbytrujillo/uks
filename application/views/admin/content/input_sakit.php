@@ -40,14 +40,8 @@
 
                                     <div class="input-group">
 
-                                        <input type="text"
-                                            id="nama_siswa"
-                                            name="nama"
-                                            class="form-control"
-                                            placeholder="Ketik Nama Siswa..."
-                                            maxlength="50"
-                                            required
-                                            autofocus>
+                                        <input type="text" id="nama_siswa" name="nama" class="form-control"
+                                            placeholder="Ketik Nama Siswa..." maxlength="50" required autofocus>
 
                                         <div class="input-group-append">
                                             <button class="btn btn-info">
@@ -78,16 +72,16 @@
                             <div class="table-responsive">
                                 <table id="table-1" class="table table-striped table-bordered">
                                     <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Waktu Sakit</th>
-                                        <!-- <th>Jam</th> -->
-                                        <th>Nama</th>
-                                        <th>Kelas</th>
-                                        <th>Keluhan</th>
-                                        <th>Diagnosa</th>
-                                        <th width="18%">Aksi</th>
-                                    </tr>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Waktu Sakit</th>
+                                            <!-- <th>Jam</th> -->
+                                            <th>Nama</th>
+                                            <th>Kelas</th>
+                                            <th>Keluhan</th>
+                                            <th>Diagnosa</th>
+                                            <th width="18%">Aksi</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
                                         <?php $no = 1; ?>
@@ -109,7 +103,9 @@
                                                 <?= date('d', strtotime($sakut->tgl_sakit)) ?>
                                                 <?= bulan_indo(date('m', strtotime($sakut->tgl_sakit))) ?>
                                                 <?= date('Y', strtotime($sakut->tgl_sakit)) ?><br>
-                                                Pukul : <span style="color: red; font-weight: bold"><?= date('H:i', strtotime($sakut->tgl_sakit)) ?></span> WIB
+                                                Pukul : <span
+                                                    style="color: red; font-weight: bold"><?= date('H:i', strtotime($sakut->tgl_sakit)) ?></span>
+                                                WIB
                                             </td>
 
                                             <td><?= $sakut->nama ?></td>
@@ -124,21 +120,21 @@
 
                                                 <!-- DETAIL -->
                                                 <a href="<?= base_url('admin/detail/'.$sakut->id_sakit) ?>"
-                                                class="btn btn-sm btn-info">
-                                                <i class="fa fa-eye"></i>
+                                                    class="btn btn-sm btn-info" style="border-radius: 30px;">
+                                                    <i class="fa fa-eye"></i>
                                                 </a>
 
                                                 <!-- UPDATE -->
                                                 <a href="<?= base_url('admin/edit/'.$sakut->id_sakit) ?>"
-                                                class="btn btn-sm btn-primary">
-                                                <i class="fa fa-edit"></i>
+                                                    class="btn btn-sm btn-primary" style="border-radius: 30px;">
+                                                    <i class="fa fa-edit"></i>
                                                 </a>
 
                                                 <!-- DELETE -->
                                                 <a onclick="return confirm('Apakah Kamu Yakin ?')"
-                                                href="<?= site_url('admin/delete/'.$sakut->id_sakit)?>"
-                                                class="btn btn-sm btn-danger">
-                                                <i class="fa fa-trash"></i>
+                                                    href="<?= site_url('admin/delete/'.$sakut->id_sakit)?>"
+                                                    class="btn btn-sm btn-danger" style="border-radius: 30px;">
+                                                    <i class="fa fa-trash"></i>
                                                 </a>
 
                                             </td>
